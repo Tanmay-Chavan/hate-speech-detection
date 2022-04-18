@@ -1,0 +1,12 @@
+hadoop fs -rmr \*
+hadoop namenode -format
+start-all.sh
+java -cp target/hate-speech-detection-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.tanmay.dads.hate_speech_detection.TweetReader data/hate_speech_train.tsv tweets-seq
+hadoop fs -put tweets-seq tweets-seq
+mahout seq2sparse -i tweets-seq/chunk-0 -o tweets-vectors
+mahout split -i tweets-vectors/tfidf-vectors --trainingOutput train-vectors --testOutput test-vectors --randomSelectionPct 40 --overwrite --sequenceFiles -xm sequential
+mahout trainnb -i train-vectors -el -li labelindex -o model -ow -c
+mahout testnb -i train-vectors -m model -l labelindex -ow -o tweets-testing -c
+mahout testnb -i test-vectors -m model -l labelindex -ow -o tweets-testing -c
+
+# these commands work on my laptop to run the programs

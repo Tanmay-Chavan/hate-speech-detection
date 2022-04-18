@@ -1,0 +1,2494 @@
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection/data$ hadoop fs -rmr \*
+Deleted hdfs://localhost:9000/user/hdoop/labelindex
+Deleted hdfs://localhost:9000/user/hdoop/model
+Deleted hdfs://localhost:9000/user/hdoop/temp
+Deleted hdfs://localhost:9000/user/hdoop/test-vectors
+Deleted hdfs://localhost:9000/user/hdoop/train-vectors
+Deleted hdfs://localhost:9000/user/hdoop/tweets-seq
+Deleted hdfs://localhost:9000/user/hdoop/tweets-testing
+Deleted hdfs://localhost:9000/user/hdoop/tweets-vectors
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection/data$ hadoop namenode -format
+22/04/18 23:36:20 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = tanmay-Legion-5-Pro/127.0.1.1
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 1.1.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.1 -r 1411108; compiled by 'hortonfo' on Mon Nov 19 10:48:11 UTC 2012
+************************************************************/
+Re-format filesystem in /tmp/hadoop-hdoop/dfs/name ? (Y or N) y
+Format aborted in /tmp/hadoop-hdoop/dfs/name
+22/04/18 23:36:21 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at tanmay-Legion-5-Pro/127.0.1.1
+************************************************************/
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection/data$ java -cp target/hate-speech-detection-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.tanmay.dads.hate_speech_detection.TweetReader data/hate_speech_train.tsv tweets-seq
+Error: Could not find or load main class com.tanmay.dads.hate_speech_detection.TweetReader
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection/data$ cd ..
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ java -cp target/hate-speech-detection-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.tanmay.dads.hate_speech_detection.TweetReader data/hate_speech_train.tsv tweets-seq
+Apr 18, 2022 11:36:46 PM org.apache.hadoop.util.NativeCodeLoader <clinit>
+WARNING: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Skip line: 
+Skip line: bitch"
+Skip line: 
+Skip line: I like this movie."
+Skip line: @AmJemieBenn"
+Skip line: Awwwwe! This is soooo ADORABLE!"
+Skip line: 
+Skip line: &#128533;"
+Skip line: 
+Skip line: They *are* fairy tale creatures."
+Skip line: 
+Skip line: Smfh &amp; wonder why nobody decent wants them"
+Skip line: 
+Skip line: You got all the hoes tho"
+Skip line: 
+Skip line: r purple. Ceeeleee""man this gurl was jus playin on the ""stupid hoe "" track. But in still shitted on sum gurls"
+Skip line: 
+Skip line: Lmfao"
+Skip line: 
+Skip line: that show was everything tf"
+Skip line: Poff: ... Double pussy &#128526;"" smh"
+Skip line: 
+Skip line: ME: ""In ya &#128089;, in ya damn &#128089;&#8252;&#65039;"""""
+Skip line: @Iemonaids dis bitch in da wrong tree bro."
+Skip line: Me: *rolls on the floor, laughing*"
+Skip line: Yeah bitch, yeah bitch, call me _______:
+Skip line: a.) Maybe
+Skip line: b.) Steve-O
+Skip line: c.) Later
+Skip line: d.) Jesse Pinkman""
+Skip line: @machinegunkelly"
+Skip line: 
+Skip line: bitchy promo"
+Skip line: 
+Skip line: LMFAO KITTYCOPTER"
+Skip line: 
+Skip line: Her size isn't exactly the most healthy tho"
+Skip line: white bitches , cocaine"""
+Skip line: Angelique: Smiles *Dips cracker in soup*"
+Skip line: 
+Skip line: *sips tea*"
+Skip line: 
+Skip line: Thotermelon"
+Skip line: 
+Skip line: Lmao &#128553;&#128514;"
+Skip line: &#128123;spook"
+Skip line: blinders on mine.
+Skip line: cause i can't see you at all."" Lmao"
+Skip line: Thats why we get high, cause you neva know when you're gonna go"" my sister is perfect (:"
+Skip line: 
+Skip line: You also called me trash rn"
+Skip line: 
+Skip line: *trys new things with bestfriend*""
+Skip line: 
+Skip line: *bitch who do you love*"
+Skip line: 1. Boil water 
+Skip line: 2. Snort cheese powder
+Skip line: 3. Drink boiling water 
+Skip line: 4. Fuck bitches"""
+Skip line: 
+Skip line: Lmao bitch got on some huggies"
+Skip line: No bitch
+Skip line: Bye bitch"" http://t.co/RbcRXMRtQP"
+Skip line: But as soon as this bitch gets rich in political power, her views will change!
+Skip line: POLITICAL WHORES! http://t.co/ekEPSjWcyU&#8221;"
+Skip line: Dad ""&#9996;&#65039;&#9996;&#65039; duces bitch"" &#128514;&#128514;&#128553;&#128553;"
+Skip line: -@1PoloBoy 
+Skip line: Song called ""Dope"".
+Skip line: Download the mixtape here: http://t.co/LaCZ1e6TG7"
+Skip line: 
+Skip line: Like, negro... one of the first things they LOOK at is shoes, dog"
+Skip line: She's married, but I still wanna bang her
+Skip line: She won't have sex with me
+Skip line: What a bitch"" ~A troubadour, probably"
+Skip line: 
+Skip line: That supposed to fool us bitch?"
+Skip line: ""what? How do you even know what that tastes like"""
+Skip line: ""I taught myself how to eat pussy hair""&#128514;
+Skip line: Name the movie &#128514;"
+Skip line: ""Oh really?""
+Skip line: ""Yeah...right after 9/11...mad pussy.""
+Skip line: ""Really?""
+Skip line: ""Yes...I'll NEVER FORGET."""
+Skip line: @wizkhalifa"
+Skip line: Me: http://t.co/vgnwcFgvSJ"
+Skip line: Every girl in the room starts waving there hands around."
+Skip line: Gotta be the dumb hoe anthem..."
+Skip line: ""No dad, he's Asian."""
+Skip line: &#128514;"
+Skip line: 
+Skip line: Sometimes freestyles be freestyles. And I'm okay with that."
+Skip line: 
+Skip line: Classy young lady."
+Skip line: White, brown, yellow and black color is not restricted"""
+Skip line: - Robert Frost Giant"
+Skip line: "" 2, 4, 6, hut! We like it in our butt!"""
+Skip line:  Yes that's already been established, anything else you have to say?"
+Skip line: DEEEEAAAADD"
+Skip line: No shit you dumb ass cunt now go post pictures if your flat ass titties on ig slut"
+Skip line: ""rip what apart""
+Skip line: ""lol"""
+Skip line: 
+Skip line: Why uou so ghetto?"
+Skip line: #Unanimous"
+Skip line: She said what are fasting,"
+Skip line: Valerie Jarrett, so I control my reflex to bitch slap her."
+Skip line: Covington reads responses &amp; mocks FBI, Andy on Real Politics, Liv on her awakening, Gretchen
+Skip line: http://t.co/t9JyhAncPR"
+Skip line: I do the Pontiac sprinkler...
+Skip line: 
+Skip line: Nigga nigga nigga nigga spic spic spic spic nigga nigga nigga nigga"
+Skip line: Any were else = horrible weather and no bitches&#8221;"
+Skip line: 
+Skip line: bitch he follow everybody shut yo ass up"
+Skip line: . */. &#127796; |. &#165;~ ! &#127796;. | &gt; \ 
+Skip line: &#128043; $. / &#127806;\ ; &#128043; ) &amp;&#128043;*"
+Skip line: #yep #donttryme #bitch #bitchmode #testme #Truth #trust http://t.co/ky9Fi39zUx"
+Skip line: 
+Skip line: &#8220;@whatskillfeed: i guess ill just trash this drawing because of roster changes...&#128532; http://t.co/2r8wqgE8cR&#8221;"
+Skip line: Me: https://t.co/5PAfEceL1i"
+Skip line: 
+Skip line: &#164;&#176;&#164;&#176; gino &#176;&#164;&#176;&#164;"
+Skip line: 
+Skip line: Shut yo bitch ass up"
+Skip line: 
+Skip line: Nothing lowkey about it.. Shit was trash"
+Skip line: 
+Skip line: -No pics needed. Animal.&#8221; 
+Skip line: 
+Skip line: Dem coloreds be wack"
+Skip line: My Anaconda Don't
+Skip line: My Anaconda Don't
+Skip line: Want None Unless You Got GOALS Hun &#58143;&#58113;&#128213;&#128218;&#128176;&#127969;&#128107;&#128141;&#8221; Smh . White Ass niggah ."
+Skip line: zebra print bed sheets 9/10 she a hoe&#8221; @rachel_dority &#128514;&#128514;&#128514;"
+Skip line: 
+Skip line: I suck dat bitch. Don&#8217;t y&#8217;all eva believe a colored man don&#8217;t eat no pussay"
+Skip line: 
+Skip line: #lezzzbehonest"
+Skip line: 
+Skip line: I #WatchLikeaKing fo da colored folk dying from dis shit food"
+Skip line: 
+Skip line: Dis make colored folk happy"
+Skip line: 
+Skip line: This is funny? :/"
+Skip line: 
+Skip line: Nah.. His weapons just trash"
+Skip line: -A hoe&#8221;"
+Skip line: 
+Skip line: https://t.co/hiMKk7fYxB&#8221;&#128557;"
+Skip line: 
+Skip line: - Dis be heaven fo a colored man"
+Skip line: 
+Skip line: http://t.co/ChNxcPLZWR&#8221;
+Skip line: 
+Skip line: Hidey hidey hoe! White folk be all noyvous round coloreds"
+Skip line: Uighur Jihadis: they're not just a PRC tool."
+Skip line: 
+Skip line: @finntasticccc &#128521;"
+Skip line: 
+Skip line: Baltimore...&#8221; Man them hoes fine &amp; crazy"
+Skip line: 
+Skip line: Bet u didn't even have a date bitch, I just went and say in the corner"
+Skip line:  hottest guys n makes them feel stupid @UglyAssAyeKay&#8221; i got called an ego kill"
+Skip line: 
+Skip line: And by a Canadian. Hey hoser....how many will you adopt?"
+Skip line: 
+Skip line: Oh well FBD &#128514;"
+Skip line: 
+Skip line: #TeamWhiteGirls 
+Skip line: #SwirlTheWorld"
+Skip line: 
+Skip line: Stop lying to these hoes bro.. That shit annoying"
+Skip line: 
+Skip line: Awee thanks faggot"
+Skip line: 
+Skip line: thank @HeartOfAHustlah&#8221; &#128514;&#128557;&#128514;&#128557;"
+Skip line: Eat a lot of pussy
+Skip line: #MattieTrumpsTipsForABetterLife&#8221;
+Skip line: 
+Skip line: Eat the whole ass"
+Skip line: Me : And somebody's bitch too&#8221;"
+Skip line: 1. Calling people ""niggers"" on Xbox
+Skip line: 2.fucking their pet
+Skip line: 3. Shooting up their school&#8221;"
+Skip line:  RT @JoeBudden: Some of these chicks don&#8217;t want a man, they just want support.&#8221; Tell that bitch to get a bra"
+Skip line: 
+Skip line: ""That white pussy uhhh get ya"""
+Skip line: 
+Skip line: And he hate colored folk"
+Skip line: 
+Skip line: #witchcraft"
+Skip line: THAT'S CALLED...PREACHING THE TRUTH!"
+Skip line: 
+Skip line: Fall back nigga &#128299;.. I don't share my hoes"
+Skip line: 
+Skip line: but pussy = Food 
+Skip line: 
+Skip line: so food &#8805; pussy.&#8221; http://t.co/ZJ3zyduxkO"
+Skip line: 1. Cat
+Skip line: 2. Nurse
+Skip line: 3. Bunny
+Skip line: 4. Police officer
+Skip line: 5. Themselves&#8221;&#128129;"
+Skip line: #HookEm&#128002;&#8221; he's still trash"
+Skip line: 
+Skip line: How is this trash..."
+Skip line: THE BAMBINO IS WATCHING!"
+Skip line: 
+Skip line: RT @KB_Three: About to put in field work &#127944;&#8221; damn dee got all the jokes"
+Skip line: 
+Skip line: Never fear Captain Save-A-Thot is here to save that hoe &#128526;"
+Skip line: 
+Skip line: Ur da real mvp &#128557;&#128079;&#8221; http://t.co/6dImZ71MPV"
+Skip line: 
+Skip line: Yass! I'm glad you speak your mind to these 2faces hoes"
+Skip line: Yea and we all the Cocoa Puff bird fucking"
+Skip line: Bravo!"
+Skip line: 
+Skip line: &#128514;&#128514;&#128514;"
+Skip line: 
+Skip line: #fandomapology 
+Skip line: #5sosFamAnd1DfandomFollowParty&#8221; PREACH"
+Skip line: 
+Skip line: FOREAL, fuck dat bitch."
+Skip line: 
+Skip line: You huh?&#8221; Huh lol"
+Skip line: Dis be like da colored Brady Bunch"
+Skip line: 
+Skip line: Dis my pal from our graduation when we was 26"
+Skip line: 
+Skip line: He's a pussy. He ain't going anywhere."
+Skip line: sike im celibate""
+Skip line: 
+Skip line: bitches be like &#128070;&#128070;&#128070;&#128070;&#128070;&#128070;&#128070;&#8221;&#128064;&#8221;&#128064;"
+Skip line: 
+Skip line: Me:
+Skip line: 
+Skip line:  http://t.co/wC5Tr4UHS6&#8221; @ayostew_"
+Skip line: 
+Skip line: Obviously nobody cares bitch"
+Skip line: 
+Skip line: Since when?&#191;?"
+Skip line: 
+Skip line: same"
+Skip line: 
+Skip line: This must be the sweetest wave ever.&#8221; @LayaFace"
+Skip line: So nigga see me when you see me , catch me in traffic"
+Skip line: Cuh went from "" Its time to settle down "" to "" Where the hoes at ?! "" &#1041204;&#1041204;&#1041204; . http://t.co/bi9rbvjTUn"
+Skip line: Be Like "" owieee he got tats , he bang , wifi with no password &#1041191; My... http://t.co/vxADs6boHa"
+Skip line: *Turns into a cracker*
+Skip line: ""@gIacier: *goes black friday shopping*
+Skip line: 
+Skip line: *turns into a nigger*"""
+Skip line: Me: bird shut up!!!
+Skip line: *squak*
+Skip line: Alex: that was an act of defiance 
+Skip line: @Alextalksback"
+Skip line: -Maybe. You gotta card for &#8220;Sorry that tranny died in your motel room; now your wife knows. Here&#8217;s an Applebees gift card&#8221;?"
+Skip line: &#8853;http://t.co/DJgs6rGdfV"
+Skip line: @07Cannon: &#8220;@Rosegoldracks: Quote this and I'll guess your body count&#8221;&#8221;"
+Skip line: 12/19 - a pussyfootin xxxmas (hoe hoe hoe motherfucker santa claws is coming to town)"
+Skip line: 65% bitch
+Skip line: 22% homosexual"
+Skip line: 
+Skip line: A. HIT FEET
+Skip line: B. STANK ASS BREATH
+Skip line: C. SKANK ASS WAYS"
+Skip line: 
+Skip line: Touchdown with :28 on the clock.
+Skip line: 
+Skip line: Michigan some hoes."
+Skip line: 
+Skip line: moke up"
+Skip line: #crazycats http://t.co/A5ZBVDXapx"
+Skip line: 
+Skip line: I'm big boned.
+Skip line: 
+Skip line: hehehehehe."
+Skip line: 
+Skip line: 1 of 1503 yellow and black feature car. buck tag is on the radiator support. 67,3xx miles,... http://t.co/1nkNfZqBo9"
+Skip line: i got a missed call from yo bitch"
+Skip line: You be totally correct Anthony. Can&#8217;t be livin round dem colored folk. Day be bringin down da hood and dem propery value"
+Skip line: Hey Antony you speaks colored good"
+Skip line: #butthurt"
+Skip line: Dat cat gonna scratch all up on dat colored boy and he gonna end up in da chow mein"
+Skip line: I bet he would have gone ape shit and killed them all if they attacked Muslims."
+Skip line: Dare be only one bag dat folks be suckin on what I comes to yo partayyyy! All da ofay be wantin to ride in my eldorato"
+Skip line: Dat means get the fuck out hoe I be thinkin"
+Skip line: Y'all be some crazy white bitches. I wants to lay down wit you bowf."
+Skip line: We niggas like fuckin roaches. Let one in and you hot dam infested. You a crazy bitch. I dig yo ass"
+Skip line: #dancerproblems"
+Skip line: OUR GOVERNMENT WAS JUST TRYING TO PROTECT THE DESERT TORTOISE! 
+Skip line: Atleast, that's what Barack Obama Says..."
+Skip line: Right in the pussy"
+Skip line: gun sales have skyrocketed. Gun crime has fallen sharply.
+Skip line: Any claim to the contrary is using fuzzy math."
+Skip line: 
+Skip line: And a major league bitch too!"
+Skip line: I likes yo page. I wants to make da lovin to a white girl wit a colored man watchin and pullin his weenis"
+Skip line: plot twist he is a faggot"
+Skip line: Makes bullet placement interesting thru a scope."
+Skip line: Y'all gots betta machinery fo dat. Hanger be ghetto"
+Skip line: I likes it back dare. It's free fo me cause whitey pay da fee"
+Skip line: Who is da ""we"" whitey?"
+Skip line: I likes me dem Mexican hoes. Day suck me off for 5 dollas"
+Skip line: I is colored, Latino and some Jewish. When I move in, I don't ruin the neighborhood, I wipe it out!"
+Skip line: Den you enjoy da nite wit a colored man. We do it again in 2 weeks. Lets me no if I needs ta bring da magnums"
+Skip line: My shit's like an eggplant baby. Black and big enough so dat all da women gets dem a piece"
+Skip line: I wants to call bouts my vitaligro but I ain't sho if you a doctor fo da colored folk"
+Skip line: All dem colored boys be sayin I dare baby daddy. I gots to protect my semen under da lock and key. And I wrap 2x"
+Skip line: Does da N mean negro?"
+Skip line: I wonders why dare ain't no colored folk up dare?"
+Skip line: Well ho di doe. Thank you"
+Skip line: I ain't to show bout dem colored diamonds you talk about on da radio. 
+Skip line: Any diamond you gets from a colored be stolen"
+Skip line: 
+Skip line: Look at all those bitches"
+Skip line: Is you sure you ain't colored?"
+Skip line: AIDS ain't all dat bad. You can become da hoe and do da crack and ain't gonna make no difference anyhow"
+Skip line: You tryin to say ofay?"
+Skip line: You can always gets da colored folk back in da cage wit da KFC"
+Skip line: Day is like coloreds dat wrap day hoes like mummies"
+Skip line: I hates to interject but cans I have yo digits? I likes wiggers dat wanna be fucked by coloreds"
+Skip line: Some Jeffrey Dommer Type would be all over that sloppy ho."
+Skip line: ,hmm cuz u don't know what fuck u talking about crackers these days."
+Skip line: 
+Skip line: http://t.co/LTi96AZjwk"
+Skip line: 
+Skip line: I got my hopes up when a couple of the national guys (including that Kiper/McShay mock) had him slipping."
+Skip line: She drawing the next number"
+Skip line: Where the fuck were you this summer bitch?"
+Skip line: 
+Skip line: #MOAR"
+Skip line: *throws phone in trash over butchered subtweet"
+Skip line: Inch that bitch out and flick it wit my tongue like a damn pinada"
+Skip line: See what I did there"
+Skip line: How bout you make music that ain't NEGATIVE!"
+Skip line: You date colored men?"
+Skip line: Busy Choking on that Cock I told you to find?"
+Skip line: Go back to watching BARNEY!"
+Skip line: I'M figuring, this may have something to do with it! http://t.co/62S7BgMYPX"
+Skip line: I'm concerned, WE have pussies &amp; psycho's!"
+Skip line: #muslims FLAT OUT NO WAY!
+Skip line: I use my sheets on my bed, NOT MY HEAD!"
+Skip line: HE got a pussy now which makes him a her. And she's bad. So.."
+Skip line: Dis bitch gots spunk!"
+Skip line: Den the fat colored girl chased me down day street while she swingin da table wit one arm... I wants my pay!!!"
+Skip line: Hello dare momma. I show glad dat u follow me. U lbe screamin hot in dem pitchers. 
+Skip line: You eva b wit colored men?"
+Skip line: She be what we say in da hood white trash"
+Skip line: Y&#8217;all whitey gots to PAY fo da preparations"
+Skip line: spiked that bitch
+Skip line: damned nailed her down"
+Skip line: 
+Skip line: 1"
+Skip line: Is da colored folk allowed to join? Cuz in my hood folk worried about da watermelon not growin and da chicken too small"
+Skip line: Dat damn dog eats betta den most colored folk do."
+Skip line: Dat dawg live betta den most colored folk in my hood"
+Skip line: I be wishin you was local. I takes you to da Yankee game and spoil you"
+Skip line: I gots to be bein colored and all"
+Skip line: Yeah man. He even scare me and I is a nigger"
+Skip line: You never survive in da colored hood"
+Skip line: Dat colored guy be braisin"
+Skip line: I likes da Yankees"
+Skip line: Ware da colored elite meet to eat"
+Skip line: FUCKIN STALKER!"
+Skip line: A Christmas Story
+Skip line: Rudolph, but only because of the island of misfit toys."
+Skip line: exotic bitches
+Skip line: do exotic things
+Skip line: these hoes aint loyal"
+Skip line: Chippah I hopes you ain't be hangin wit dis wigger boy"
+Skip line: The Biebs is getting fucked right in the pussy"
+Skip line: This look more like your little baby son of a bitch. http://t.co/GO58cT7ue7"
+Skip line: I'm retarded! &#128541;"
+Skip line: Cants even fool a colored man wit dis bullshit http://t.co/gtln1tpMgi"
+Skip line:  Fuckin pirelli tire black ass nigga whit a white boy shirt on but my nigga did loosen up a lil bit.#bowbow"
+Skip line: 
+Skip line: Hey, Bitch!"
+Skip line: 
+Skip line: as in cat"
+Skip line: -Spanish springs"
+Skip line: I likes dat name. Dem sand niggers needs to know dare place in da pecker order"
+Skip line: Dat was Charlie"
+Skip line: Tanks a lot dare mr. Pubes. I love my Uncle Tom :)"
+Skip line: You boys sure come up wit some crazy names. In my day, we never talked about no faggots"
+Skip line: Y'all gots to take da colored vacation. Kentucky fried chicken but only da white meat"
+Skip line: Hey...hoe di doe...dat is funny if its da girl"
+Skip line: She colored not Lebanese"
+Skip line: We Jews are G-d's chosen people."
+Skip line: I eat dat chicken out your love box baby. Lovin a white woman while eatin chicken. A colored mans dream"
+Skip line: You can bet Valerie Jarret has her hands all over this ""humanitarian Crisis"". I Didn't vote for that commie bitch."
+Skip line: Little bitch would come home &amp; KISS THE GROUND!"
+Skip line: I glads dis colored man cans be of soyvice fo da white man"
+Skip line: public display gets public opinion."
+Skip line: Yup! And now we pickin you white bitches bare like a chicken leg"
+Skip line: I'm colored. Ain't supposed to be no good influence"
+Skip line: Me bitch!"
+Skip line: Nothing going on, nothing to do, nothing to bitch about, few laws"
+Skip line: I agree 100%. No naturalized citizenship, no anchor baby amnesty. All go to parents country of origin."
+Skip line: Here ya go wetback, eat this.. http://t.co/kf6PgZvH5G"
+Skip line: Anti-zionist is a codeword for antisemite."
+Skip line: every bitches claim"
+Skip line: 
+Skip line: Wait, that sounds racist..."
+Skip line: Was just wondering if yo espect to add mo colored tv stations befo I renew dis"
+Skip line: Ok. I guess you ain't colored so so don't know da channels?"
+Skip line: You gots da BET and da MSNBC wit dat colored reverend who only listen to coloreds. What else I missing?"
+Skip line: Y'all hire colored folk? Only work half da day and throw da mail in da sewer if we ain't done"
+Skip line: you sound like a real cunt"
+Skip line: Someone to CRY about ANYTHING! 
+Skip line: IE: Kids MUST WEAR Bicycle Helmets!"
+Skip line: 
+Skip line: And then everyone bitches anyways. The guy can't win with the fans we have. We would run Revis out of here in his prime"
+Skip line: Are you sure you ain't colored?"
+Skip line: See dis what happens when a colored man move into @Rotten_Soil&#160;'s neighborhood. He ain't been sick fo 10 days"
+Skip line: It's a nice way of callin y'all honkies"
+Skip line: I ain't never orderin from no colored pizza stow"
+Skip line: I see da dayd presidents coz my bitches and hoes be makin money day way"
+Skip line: And yes, MUHAMMED was a bitch! Just like OSAMA BINLADEN!"
+Skip line: Now that you mention it! I bet the white man put the Desert tortoise on #BundyRanch"
+Skip line: I'm done with this GAY whiney bitch. NEXT......"
+Skip line: God bless you whitey. I be sleepin in tomorrow"
+Skip line: 
+Skip line: Your hairy pussy tho.... Different story."
+Skip line: Every fat bitch knows that"
+Skip line: I hopes dis ain't cause he colored cause I knows he be actin all nigga like"
+Skip line: I don't likes dat magazine. All da black folk look like dey one chromeasome away from da ape"
+Skip line: Approximately 1/2 in one crash. There wasn't supposed to be that many members of a seal team on one bird"
+Skip line: Oh well youth gets frustrated easy."
+Skip line: it ain't nuthin
+Skip line: instead of worrying who dat bitch fucking 
+Skip line: why don't u get chu sum money"
+Skip line: Your mouth
+Skip line: Your pussy
+Skip line: Your ass
+Skip line: My dick
+Skip line: And a sandwich after we fuck.
+Skip line: What kinda question is that?"
+Skip line: I don't understand the need for multiple autopsies. I guess they're going to keep on until they can slant 1 against the officer"
+Skip line: 
+Skip line: *writes name all retarded*"
+Skip line: Twinkie 35' long, DJ Pon3 cameo, Magic&#8482;, Crystal Tree. #TNGSeason4Finale"
+Skip line: Is dem? I wants to has my weenis swingin but da twitter say day shut my colored ass down"
+Skip line: How day feel bout colored folk?"
+Skip line: And you a funny ofay! My mammy woulda been happy I made friends wit da folk dat brought us to da new world in chains"
+Skip line: If you don't vote you don't have a right to complain. That being said, I didn't vote for the son of a bitch&#128515;"
+Skip line: Yeah, I'd want to shoot the son of a bitch myself. LOL"
+Skip line: **~aesthetic~** http://t.co/cYOpCv8oq8"
+Skip line: That bastard Obama is giving them to the f-ing wetbacks."
+Skip line: 
+Skip line: http://t.co/Gr627ldfaa"
+Skip line: You speak colored too?
+Skip line: I thinks I be in love"
+Skip line: I miss you too faggot &#128557;&#128522; http://t.co/vKYJGRIIFf"
+Skip line: a beam of light descended from the heavens 
+Skip line: a loud voice said fuck her right in the pussy 
+Skip line: many lives were changed that day"
+Skip line: For example my girlfriend don't like the crew I hang with she BAE"
+Skip line: Y'all ain't gots no colored folk on da show. I tinks dats be racist and shit #TheToddShow"
+Skip line: He gotta be colored"
+Skip line: Fuck her right in the pussy"
+Skip line: FA LA LA LA LA LA LA LA LA bitch &#128536;"
+Skip line: plot twist: you have no penis.
+Skip line: Penny would make that bitch like a balloon. 
+Skip line: Balloons and bitches can all float"
+Skip line: 
+Skip line: &#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;&#127814;"
+Skip line: Sure looks like a bitch to me.
+Skip line:  http://t.co/89HH52pCUe&#8221;"
+Skip line: Creating a new generation of pussies! http://t.co/fbGuCK7Wc1&#8221;"
+Skip line: RT! 
+Skip line: *If the shoe fits! 'Cause it sure looks like he married one! 
+Skip line: http://t.co/F0pGDalfaA&#8221;"
+Skip line: 
+Skip line: https://t.co/q0wswXE7Fw"
+Skip line: @JoseGuapo been had hits."
+Skip line: #NorthwestImperative
+Skip line: http://t.co/Vhy5s2apCn"
+Skip line: #diettime"
+Skip line: 
+Skip line: #vote5sos
+Skip line: #EMABiggestFans1D"
+Skip line: #SOTU"
+Skip line: } Not going to happen Berg
+Skip line: Bleat on.
+Skip line: #mngop proud #stribpol #mnleg"
+Skip line: 
+Skip line: bitch pick one.
+Skip line: 
+Skip line: Fucking hate you.
+Skip line: 
+Skip line: I know you proud but shit."
+Skip line: 
+Skip line: I got a life."
+Skip line: 
+Skip line: #AlliterationTuesday&#160;
+Skip line: #Damnismartallofasudden"
+Skip line: *misses* 
+Skip line: Mrs. Mundy: ""You're a disgrace to your race, Marcus""
+Skip line: &#128514;&#128514;&#128514;"
+Skip line: 1. HOT NIGGA
+Skip line: 2.
+Skip line: 3.&#8221;"
+Skip line: Then fuck your bitch.
+Skip line: All hail Al Qaeda"
+Skip line: 
+Skip line: DULL, you stupid bitch. DUKE WEARS BOLD PASTEL COLORS.
+Skip line: 
+Skip line: Bull makes no sense."
+Skip line: Mrs. Wells is too real&#128514;&#128514;&#128514; http://t.co/D4EnQkDswR"
+Skip line: Come to meet me without no drawers?"
+Skip line: Can I bring another bitch or nah?"
+Skip line: 
+Skip line: Getting beaned would be better!"
+Skip line: Bam, Race Card Vote Democrats out"
+Skip line: Y ahora si que no puedo vivir sin ellos"
+Skip line: &gt;&gt;&gt;&gt;when the sky is yellow, death is upon us. No. I'm scared"
+Skip line: 
+Skip line: Traditionally only played when preparing to slash bitches."
+Skip line: 
+Skip line: &#128514; &#128514; &#128514;&#128514;&#128514;
+Skip line: &#128514;&#128514; &#128514; &#128514; &#128514;
+Skip line: &#128514; &#128514; &#128514; &#128514; &#128514;
+Skip line: &#128514; &#128514;&#128514; &#128514; &#128514;
+Skip line: &#128514; &#128514; &#128514;&#128514;&#128514;"
+Skip line: 
+Skip line:  #EMABiggestFans1D"
+Skip line: 
+Skip line: ....unless you wanna be a ratchet white bitch at the clinic with 4 baby daddies. She's apparently exempt"
+Skip line: 
+Skip line: Unless you have to."
+Skip line: 
+Skip line: #vote5sos
+Skip line: #EMABiggestFans1D"
+Skip line: 
+Skip line: I have a 2008 5.4 triton motor and Transmission with 5,200 miles that came off a E250... http://t.co/d5gic83k0V"
+Skip line: 
+Skip line: ""ACH WEBSINGLE XXXXX8898 MARYLANDUNEMPINS""
+Skip line: 
+Skip line: And was like some bitch named Mary Landunem STOLE MY MONEY!"
+Skip line: Eat her pussy when she sad
+Skip line: Eat her pussy when she sleep&#128564;
+Skip line: Eat her pussy when she horny
+Skip line: EAT HER PUSSY"
+Skip line: #ThatsAFact"
+Skip line: Eat that pussy for a half an hour got her goin nuts"
+Skip line: 
+Skip line: Feelin like all these hoes in this bitch want me."
+Skip line: 
+Skip line: Inspiring. Congrats @CharlieKing85 and welcome to the family :)"
+Skip line: It is very fitting, and it is racist! 
+Skip line: I AM RACIST AGAINST ANYONE WHO HATES AMERICA!"
+Skip line: ibuprofen. My new best friends # cripple"
+Skip line: 
+Skip line: Telling you I STILL rock out to the vast majority of No Skits"
+Skip line:  http://t.co/y09Waoe4EM&#8221;"
+Skip line: #TravelNevada"
+Skip line: ...think Ima make some wings &#128522;"
+Skip line: Just like the little bitch you are"
+Skip line:  Boo Friday. 
+Skip line: #whineytweet"
+Skip line: Now Adam Sandler remains my only favorite comedian left."
+Skip line: 
+Skip line: Follower replies: facts! 
+Skip line: 
+Skip line: Girl tweets: I wanna suck some dick
+Skip line: 
+Skip line: Follower replies: hoe!!!
+Skip line: 
+Skip line: NOT FAIR"
+Skip line: Whipped it out, she said ""I never seen Snakes on a Plane"""
+Skip line: 
+Skip line: She choosing or nah?"
+Skip line: gmula! Cheweing one takes a chug, then sniffey"
+Skip line: The White Iron Band plays this Saturday(12-11-10) on the Slopes of Lutsen,MN at Papa Charlie&#8217;s(21+). Going to be a real..."
+Skip line: 
+Skip line: Aside.
+Skip line: 
+Skip line: This was my graduation cap. Like fuck you, bitch, Detroit What. http://t.co/fvNpE7ukn7"
+Skip line: ""@ZRawTaroli: ....... The rams really cut Michael Sam. Wow."""
+Skip line: You &amp; yo boys is some pussy cats!!!"
+Skip line: 
+Skip line: #ShiverMeTimbers"
+Skip line: 
+Skip line: Bitch maybe you should so you'd stay outta the clinic!"
+Skip line: RT @J0MAEL: She can enter my DMs anytime http://t.co/nZ74WBsDBH"
+Skip line: 
+Skip line: I miss my ""baby bird""! Come home, 18!
+Skip line: @somehoee"
+Skip line: Them hoes forgot about me , like they neva met a nigga"
+Skip line: Once or twice but who's countin'
+Skip line: But nothin compares
+Skip line: To these blue &amp; yellow purple pills&#128156; http://t.co/fMjlVMEqDO"
+Skip line: Cause I know a bitch could be somewhere sucking a dick (ayeeee)"
+Skip line: Photography by patrickos http://t.co/steiM7i09p"
+Skip line: Its a myth"
+Skip line: 
+Skip line: Cause damn that fuckin sucks bruh I was retarded high"
+Skip line: The pussy was right 
+Skip line: The pussy was tight"
+Skip line: She's all 99, I think I need a sub machine gun #gratata"
+Skip line: 
+Skip line: They just ain't here yet nigga"
+Skip line: 
+Skip line: In tha air dats where my doors issssss"
+Skip line: Confused ass bitch What you gon' do?
+Skip line: Is you gay bitch? Is you straight bitch?"
+Skip line: 
+Skip line: E V E R Y T H I N G"
+Skip line:  I get it poppin, Dont I? I'll end up stoppin, Wont I?"
+Skip line: ""your a stupid hoe"""
+Skip line: laid back relaxed your mental http://t.co/xyNGDzLDRb"
+Skip line: 
+Skip line: Like they'd turn down millions
+Skip line: 
+Skip line: What the fuck ever!"
+Skip line: 
+Skip line: Do I talk to them? yes. 
+Skip line: 
+Skip line: Do I want them..... http://t.co/6wKvVpsXqP"
+Skip line: What do move away from da dark side mean?"
+Skip line: 
+Skip line: It don't."
+Skip line: #Respect"
+Skip line: They're not smart enough to procreate with me. #BBN"
+Skip line: 
+Skip line: JK 
+Skip line: 
+Skip line: Just trolling
+Skip line: 
+Skip line: Fags"
+Skip line: 
+Skip line:  #EMABiggestFans1D"
+Skip line: My family life is fucked
+Skip line: My love life is fucked
+Skip line: My social life is fucked
+Skip line: Just my outlook on life is fucked"
+Skip line: Kidnap em, attack em with axes n shit"
+Skip line: CAUSE THE WAY YOU CARRY YOURSELF GOT ME TICKED OFF I ain't tryin to be Rick Ross..."
+Skip line: *said in Dave Chappell voice*"
+Skip line: 
+Skip line: Cuz them Scream bitches STAYED getting knocked over an shit. Fuck them pussies. Without surprise they shitty."
+Skip line: I would have tons of kids, never work, get lots of free stuff &amp; bitch about it! 
+Skip line: Thank God I wasn't~What a DRAG I'd B"
+Skip line: 
+Skip line: She's bad for your health!"
+Skip line: #Democrats http://t.co/ZAYMXsdza3"
+Skip line: *Vice Versa*"
+Skip line: Sad ass crackers."
+Skip line: If you wear it I will make fun of you.
+Skip line: You're a 4 star bitch."
+Skip line: 
+Skip line: Have fun with winter for me."
+Skip line: &#128139;&#127802;&#127774;&#128132;&#128142; http://t.co/JxqonTfiUq"
+Skip line: Tryna act like the
+Skip line: Wifey type."
+Skip line: It and u"
+Skip line: 
+Skip line: The irony is so deep you can use a shovel."
+Skip line: http://t.co/W0cyEcqKLo
+Skip line: Bj Up and At 'Em
+Skip line: #stribpol #mngop"
+Skip line: Me: fuckin bitches &amp; stuff, ya know
+Skip line: Jordan: alright seriously
+Skip line: 
+Skip line: &#128533; @Believes116 #IChooseToBeAbstinent"
+Skip line: #work"
+Skip line: BRING ON THE CAT!"
+Skip line: Is it too late in life to get adopted?"
+Skip line: #U #S #A"
+Skip line: HAHA bitches."
+Skip line: 
+Skip line: Hasta la bye bye bitches &#128514;"
+Skip line: guess she put in work and popped that pussy lmao"
+Skip line: Cause their pecker's in the way"
+Skip line: 
+Skip line: Una vez en Jap&#243;n 5 japoneses crearon una m&#225;quina que atrapaba ladrones. Primero la m&#225;quina la... http://t.co/khzl8PfGCT"
+Skip line: 
+Skip line: At the bus stop"
+Skip line: 
+Skip line: Y'all do too much from behind a phone"
+Skip line:  
+Skip line: To us we aint pimps but they still cant press this average @JoeBudden"
+Skip line: If you answered Cigarillo's...you've seen this episode b4"
+Skip line: http://t.co/V01w8UamJy"
+Skip line: 
+Skip line: ""You matching or.....?""
+Skip line: 
+Skip line: Bad bitch: *bats eyelashes*
+Skip line: 
+Skip line: "".........are you matching or?""&#8221;"
+Skip line: ""@Kellz622: Tell her she's beautiful as much as you can. It'll make her smile"""
+Skip line: Mom starts being a fucking bitch I just crank up the system. Simple solutions"
+Skip line: Feel bad for ol boy http://t.co/IjacWo6OB8"
+Skip line: Maccin these bitches &amp; Makin my Cheese&#128514;&#128557;&#128514;"
+Skip line: Cuz ima eat until you scream"
+Skip line: Peter has a job saving the city as Spiderman and she's bitching about how he hasn't came to her play"
+Skip line: May an elephant caress you with his toes.
+Skip line: May your wife have runners u&#8230; http://t.co/h6e278e85s"
+Skip line: Mom: ""You've gotta stop."""
+Skip line: Sierra: ""welp there goes school"""
+Skip line: Swiftee &amp; Narnfraud = pathetic and disturbed pair of thugs
+Skip line: #mngop proud?
+Skip line: #stribpol"
+Skip line: 
+Skip line: -@dillyduzit"
+Skip line: 
+Skip line: Yes, duck, like the bird."
+Skip line:  (404) 394-1570&#160;&#160;--&gt; @sevenflyy ""Red Lust"" &amp; ""Cherry White"" beanies http://t.co/LxjMBCTgJj"
+Skip line: I'm lowkey tryna get off this hoe for yall"
+Skip line: Me naturally forever be fly!"
+Skip line: When you pay TAXES, you are paying for everything you bitch about!
+Skip line: #IRS #GovernmentAffairs #obamacare http://t.co/D5SPVgJxto"
+Skip line: 
+Skip line: NYC Media now: BRING OUT YOUR DEAD."
+Skip line: 
+Skip line: but bitch nawl cuz oranges oranges oranges! bitch. You dumb as fuck."
+Skip line: 
+Skip line: She just ate a lemon jolly rancher?"
+Skip line: 
+Skip line: Never keep work where you lay"
+Skip line: 
+Skip line: Be Bruno Mars"
+Skip line: Well do you have any negro pies?"
+Skip line: #TidyTerrorist
+Skip line: 
+Skip line: http://t.co/sb3U1XpeG4"
+Skip line: 1) stop being a fucking bitch
+Skip line: 2) eat more of it
+Skip line: 3) cry you fucking pussy"
+Skip line: #LordKnows"
+Skip line: ""I know none of these coons i work with tipped so here's $15.""
+Skip line: He was right too &#128514;&#128514;&#128514;"
+Skip line: ""@TheDrunkStory: ""Everyone knows a hoe named Ashley"" - HSN"""
+Skip line: #stribpol"
+Skip line: 
+Skip line: But for now it's saint &#128591;"
+Skip line: 
+Skip line: #MTVHottestLanaDelRey"
+Skip line: 
+Skip line: Dos pollos estaban dando vueltas en una poller&#237;a mientras los estaban cocinando a l'ast, cuando... http://t.co/fXeEAJmyfZ"
+Skip line: Bitch better be Fuckin me"
+Skip line: Lmao pussies. #LouisvillePurge"
+Skip line: 
+Skip line: ""NO WAIT I LITERALLY MEANT I LIKE CATS"""
+Skip line: Don't make you no hoe-oo"
+Skip line: 
+Skip line: Don't forget your fucking pom poms."
+Skip line: 
+Skip line: me: one sec http://t.co/MztLPgx4ur"
+Skip line: 
+Skip line: DRAFT TRACKER: http://t.co/AEueKmhkQX http://t.c&#8230;"
+Skip line: &amp; weepy fog
+Skip line: of soft light
+Skip line: &amp; cool touch
+Skip line: of wild wind
+Skip line: that carry music of birds
+Skip line: who cease to soar;
+Skip line: this feel&#8230;"
+Skip line: FEC May Yank 1st Amendment Guards for Drudge, Rest of Internet https://t.co/pVe5nNAOkV #wiunion"
+Skip line: 
+Skip line: yeah on a scale of one to ten, bitch"
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: that you're a sensitive lil bitch."
+Skip line: MAYA ANGELOU
+Skip line: 
+Skip line: #poetry #writing"
+Skip line: End up riding fo' deep
+Skip line: Pull up to that club like muthaufckin ho you don't know me&#127926;"
+Skip line: 1. I'm only held accountable for my pussy.
+Skip line: 2. It's all about&#8230;"
+Skip line: 
+Skip line: - a nigga who cheated on his girl 7 times and just broke up with him."
+Skip line: #mtvhottest one direction"
+Skip line: Israel is making Muslim women carry a yellow badge order to pray in Al-Aqsa.
+Skip line: h&#8230;"
+Skip line: https://t.co/X59D4kMY7P"
+Skip line: 
+Skip line: #Ferguson"
+Skip line: 
+Skip line: #FergusonOctober http://t.co/Leb&#8230;"
+Skip line: 
+Skip line: Number of Democrat retards butthurt by the verdict: 30,000,000&#8230;"
+Skip line: 
+Skip line: Quit being a pussy
+Skip line: Lay off the drugs
+Skip line: Call 911"
+Skip line: 
+Skip line: No more of this #GunSense nonsense.
+Skip line: 
+Skip line: #MomsDemand is statist trash http://t.co/MKl&#8230;"
+Skip line: 
+Skip line: Some parents should get a flyin bitch slap for naming kids like &#8230;"
+Skip line: 
+Skip line:  http://t.co/daithpoTw5"
+Skip line: New hoe is 
+Skip line: Da next niggas old hoe"
+Skip line: 
+Skip line: &#128557;C&#128514;H&#128557;I&#128514;L&#128557;L&#128514;&#8221; Lmao y'all fools&#128514;&#128514;&#128514;&#128514;"
+Skip line: 
+Skip line: Aries
+Skip line: Taurus
+Skip line: Gemini
+Skip line: Cancer
+Skip line: Leo
+Skip line: Virgo
+Skip line: Libra
+Skip line: Scorpio
+Skip line: Sagittarius
+Skip line: Capricorn
+Skip line: Aq&#8230;"
+Skip line: 
+Skip line: -@Sounds_good_bro http://t.co/TbgyIkpv1E"
+Skip line: I don't love these hoes"
+Skip line: 
+Skip line: &#8220;Yup.&#8221;
+Skip line: 
+Skip line: &#8220;And Superman&#8217;s.&#8221;
+Skip line: 
+Skip line: &#8220;Yup.&#8221;
+Skip line: 
+Skip line: &#8220;What am I going to be when you die?&#8221;
+Skip line: 
+Skip line: &#8220;Sad ho&#8230;"
+Skip line: @zzachbarness: That's 24/7. 
+Skip line: 
+Skip line: #Thanks"
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: .
+Skip line: Fuck a bitch"
+Skip line: http://t.co/75ZOvJEwYh http://t.co/F3VAUX9STw"
+Skip line: 
+Skip line: 4:00am: ""Not tonight bitch, not tonight."""
+Skip line: &#175;\( &#728;o&#728;)/&#175;
+Skip line:  ) )
+Skip line:  | \
+Skip line:  | |_
+Skip line: ""huh? nothing""
+Skip line: 
+Skip line:  that's what I thought hoe.
+Skip line: (&#728;o&#728; )
+Skip line:  &lt;) &#8230;"
+Skip line: 
+Skip line: Definition: kick your feet together and watch the bitches flock.
+Skip line: 
+Skip line: Sentence: blinding bitches when yo&#8230;"
+Skip line: 1. Shego
+Skip line: 2. Dexters mom
+Skip line: 3. Lola bunny
+Skip line: 4. Jessica rabbit
+Skip line: 5. Timmy turner's mom"
+Skip line: 
+Skip line: ""Why are you texting me instead of your hoes"" http://t.co/jCSQHeZoRl"
+Skip line: @elmaestro1 got to show this queer how to eat &#8230;"
+Skip line: ""Buzz buzz bitch"" and I'm like 
+Skip line: ""Nah man I ain't done shit to you"""
+Skip line: Camo is green.
+Skip line: Trick or treat bitches,
+Skip line: Happy Halloween.
+Skip line: Merica."
+Skip line: Get you a ""baby I cooked for you"" type of chick!! &#128525;&#9749;&#65039;&#128056;"
+Skip line: 
+Skip line: &#128590;&#128589;&#128105;&#128117;"
+Skip line: 
+Skip line: yeah on a scale of one to ten 
+Skip line: 
+Skip line: bitch&#8221;"
+Skip line: 
+Skip line: And pick up that trash."
+Skip line: https://t.co/K0394O7Z8d"
+Skip line: No job
+Skip line: No future
+Skip line: No education
+Skip line: &amp; have the nerve to say ""all these niggas want is pussy""
+Skip line: Bitch cause that&#8230;"
+Skip line: Hoe: You wasn't saying that August 12, 2014 at 7:22 PM
+Skip line: Me: Well you're a hoe today on October 1st 2014 at &#8230;"
+Skip line: 
+Skip line: &#11015;&#65039;
+Skip line: http://t.co/BW7ldA56mI http://t.co/sWztntfdGn&#8221; bitch lo&#8230;"
+Skip line: Violets are blue
+Skip line: I just fucked yo bitch
+Skip line: .....but nigga do you..."
+Skip line: guy holding his face: ""Omgod kobeshia shut up"" &#128514;&#128514;&#128514;http://t.co/2BfbfBVlVA"
+Skip line:  Such banana
+Skip line:  So potassium 
+Skip line:  Much yellow http://t.co/xINHDwyTqS"
+Skip line: 
+Skip line: Off to @CBSNews to sit down with the gang on CBS This Morning!
+Skip line: 
+Skip line: Join us in the 8 o'clock ho&#8230;"
+Skip line: 
+Skip line: *if my avi was big tits- this would be an epic tweet."
+Skip line: 
+Skip line: If cats are afraid of water, why does pussy get wet?' http://t.co/XffUo73q3a"
+Skip line: #IronHorse #Yankees http://t.co/O6sofyOh&#8230;"
+Skip line: #TecoRemix""bol"
+Skip line: Rihanna: ""y'all get a good pic cause this bitch ain't gone be here long"" http:/&#8230;"
+Skip line: 
+Skip line: Me: http://t.co/XfRnQ6UM1O"
+Skip line: 
+Skip line: Liberal1: you're a racist bitch
+Skip line: 
+Skip line: Liberal2: yeah kill all whites
+Skip line: 
+Skip line: (Liberal1 is white)
+Skip line: 
+Skip line: Liberal1: Not&#8230;"
+Skip line: 
+Skip line: These bitches fake. &#128073;&#128131;
+Skip line: 
+Skip line: These niggas faker. &#128073;&#128694; 
+Skip line: 
+Skip line: So it's not ""fuck y'all"", I'd rather just not fuck wi&#8230;"
+Skip line: Alright, later&#8230;"
+Skip line: 
+Skip line: Me: http://t.co/YXpESFMG8f"
+Skip line: 
+Skip line: 1. Fat
+Skip line: 2. Ugly
+Skip line: Or
+Skip line: 3. A hoe"
+Skip line: 
+Skip line: Thats why you're lonely and single, you stupid bitch."
+Skip line: 
+Skip line: bitch you breathe too much, shut the fuck up"
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: that you're a sensitive lil bitch."
+Skip line: 
+Skip line: you're still a hoe
+Skip line: 
+Skip line: That is all. have a nice day"
+Skip line: 
+Skip line: bitch what???"
+Skip line: 
+Skip line: nerds: taken &#128143; 
+Skip line: 
+Skip line: hoes: taken &#128143; 
+Skip line: 
+Skip line: everybody: taken &#128143; 
+Skip line: 
+Skip line: me: &#128694;"
+Skip line: http://t.co&#8230;"
+Skip line: 
+Skip line: ~Charlie Chaplin"
+Skip line: Correction. Pussy ass bitches ask for nudes. Real men are out there working for women &amp; actually h&#8230;"
+Skip line: 
+Skip line: - no periods
+Skip line: - no pants
+Skip line: - perfect hair
+Skip line: - u get to lure men into their death
+Skip line: 
+Skip line: also, free clam&#8230;"
+Skip line: THE SOUL COLLECTOR
+Skip line: http://t.co/VTc661dC65 #IAN1 http://t.co/1&#8230;"
+Skip line: J.cole makes you motivated 
+Skip line: Drake makes you wanna think abou&#8230;"
+Skip line: 
+Skip line: RT &#8220;@PacDaGoat: The world will be a better place when bitches like her dies lonely http://&#8230;"
+Skip line: 'Cause my chain so bright, Stevie Wonder might see"
+Skip line: 
+Skip line: noway."
+Skip line: 
+Skip line: And her head bc it sholl is big&#8221; bye bitches"
+Skip line: 
+Skip line: 1) I'm sorry
+Skip line: 2) It won't happen again
+Skip line: 3) 1 &amp; 2 are lies
+Skip line: 4) You're a pussy
+Skip line: 5) Your Mom hates you&#8230;"
+Skip line: 
+Skip line: 1. stop being a sensitive pussy
+Skip line: 2. Fuck your feelings"
+Skip line: 
+Skip line: nerds : taken &#128143; 
+Skip line: 
+Skip line: hoes : taken &#128143; 
+Skip line: 
+Skip line: everybody : taken &#128143; 
+Skip line: 
+Skip line: me : &#128694;"
+Skip line: 
+Skip line: 40 y/o me can't seem to follow these 'The Great Outdoors' Goldfish crackers &#8230;"
+Skip line: 
+Skip line: d
+Skip line:  i
+Skip line: i
+Skip line:  i
+Skip line: i
+Skip line:  i
+Skip line: i
+Skip line:  i
+Skip line: i
+Skip line:  i
+Skip line: i
+Skip line: c
+Skip line: k"
+Skip line: 
+Skip line: yeah on a scale of one to ten 
+Skip line: 
+Skip line: bitch"
+Skip line: 1.Hopsin
+Skip line: 2.Lupe
+Skip line: 3.Canibus
+Skip line: 4.IMT
+Skip line: 5.Childish G
+Skip line: 6.Papoose
+Skip line: 7.Hopsin again
+Skip line: 8.Joell Ortiz
+Skip line: 9.Krs &#8230;"
+Skip line: 
+Skip line: ""bruh if she tells me to go text my other hoes, but she's one of my hoes, do I keep texting her ?"" http://t.&#8230;"
+Skip line: 
+Skip line: ""bruh if she tells me to go text my other hoes, but she's one of my hoes, do I keep texting her ?"" http://t.&#8230;"
+Skip line: &#8230;"
+Skip line: First name, Imma
+Skip line: Like ur pancakes in tha mornin, 
+Skip line: He got u covered like Aunt Jemima"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 for a&#8230;"
+Skip line: i just heard this."
+Skip line: 
+Skip line: https://t.co/b1qBnDPxdv"
+Skip line: JayZ a bitch 4 lettin a woman hit him
+Skip line: bitches needa make up ya mind &#128134;
+Skip line: Yah want yah a&#8230;"
+Skip line: My anaconda don't &#9995;
+Skip line: My anaconda don't &#128683;
+Skip line: 
+Skip line: &#128079; Want 
+Skip line: &#128079; None 
+Skip line: &#128079; Unless 
+Skip line: &#128079; You 
+Skip line: &#128079; Got 
+Skip line: 
+Skip line: &#127838;&#127838;&#127838; Bunz &#127838;&#127838;&#127838;
+Skip line: 
+Skip line: &#128129;Hun"
+Skip line: wrap yourself around me
+Skip line: let me kiss the bruises on your heart
+Skip line: lick your unhealed wounds
+Skip line: and taste the raw wild ho&#8230;"
+Skip line: 
+Skip line: 1:log out
+Skip line: 
+Skip line: 2:go outside 
+Skip line: 
+Skip line: 3:that's it,stop being a pussy"
+Skip line: 
+Skip line: *buys beer scented candle*
+Skip line: 
+Skip line: *goes home, lights it* 
+Skip line: 
+Skip line: *waits for a boyfriend*"
+Skip line: 
+Skip line: - no periods
+Skip line: - no pants
+Skip line: - perfect hair
+Skip line: - u get to lure men into their death
+Skip line: 
+Skip line: also, free clam bra"
+Skip line: Awwwww...ho&#8230;"
+Skip line: ""I said you were ACTING like one""
+Skip line: ""So you just called me one nigga""
+Skip line: ""Shut up bitch"""
+Skip line: Jordan 4 Retro Remastered
+Skip line: ""Oreo""
+Skip line: 314254-003
+Skip line: http://t.co/NBOaxG1S19"
+Skip line: He gay&#128108;
+Skip line: She a hoe&#128129;
+Skip line: She pregnant&#128124;
+Skip line: He sell drugs&#127811;
+Skip line: They smoke weed&#127811;
+Skip line: They drunk&#127866;
+Skip line: who Cares?!
+Skip line: 
+Skip line: LEAVE PEOPLE ALONE Its &#8230;"
+Skip line: 
+Skip line: The cat is fucking annoying when she does it."
+Skip line: 
+Skip line: Sure!
+Skip line: 
+Skip line: So, I like the way your barstool shows off your clam."
+Skip line: Bring it bitch http://t.co/g7Yq2cH9Uk"
+Skip line: Tiny Jihadi http://t.co/PDIKbrvCJ8"
+Skip line: 
+Skip line: -men, prob&#8230;"
+Skip line: The fade this hoe gone catch : Pricless http://t.co/qMU2um1nC3"
+Skip line: 
+Skip line: Stranger being a hoe: you're so trashy. You're what's wrong wit&#8230;"
+Skip line: 
+Skip line: *Hand gently resting on fanny pack*"
+Skip line: 
+Skip line: &#8230;..sorry that ur bitch asses came into my house uninvited"
+Skip line: 
+Skip line: &#160;&#160;&#160;&#160;&#160;&#160; http://t.co/HvNUJT6Ss2 #Sport&#8230;"
+Skip line: Xbox one=pancake booty hoe with pancake tits"
+Skip line: Her: *sends nudes*
+Skip line: Him: *calls homie* aye, why this hoe send me this trash ass nude, yu &#8230;"
+Skip line: 
+Skip line: -The only person okay with me cal&#8230;"
+Skip line: Lost student: say bro you know whe...
+Skip line: Me: cho bitch ass up. http://t.co/oE0vJuOPwD"
+Skip line: 
+Skip line: 1. ""I still pull more hoes than you."""
+Skip line: I love smokin weed, i hate advice"
+Skip line: 
+Skip line: To be honest, I don't do either of these.&#128514;"
+Skip line: 
+Skip line: 1:My Heart
+Skip line: 2:My Weed
+Skip line: 3:My Money
+Skip line: 4:My Twitter
+Skip line: 5:My Netflix password
+Skip line: &#128175;&#128175;&#128175;&#128175;&#128175;&#128175;&#128175;"
+Skip line: &#128514;&#128514;&#128514;&#128513;&#128074;&#128175; http://t.co/c4jnQWp9dW"
+Skip line: 
+Skip line: Conceded ass 
+Skip line: 
+Skip line: (Jk ilusm)"
+Skip line: 1) We are not the Cubs
+Skip line: 2) We are not the Pirates
+Skip line: 3) We damn sure ain't no f***ing Cardinals.
+Skip line: 
+Skip line: Who cares abo&#8230;"
+Skip line:  http:&#8230;"
+Skip line: Touch my boobs &amp; ill it your dick off &amp; staple it to your forehead, since you wanna be a&#8230;"
+Skip line: Ravens &#127944;
+Skip line: Ravens &#127944;
+Skip line: Ravens &#127944; 
+Skip line: Commercial tweet &#128514;
+Skip line: Ravens &#127944;
+Skip line: Ravens &#127944;
+Skip line: Ravens &#127944;
+Skip line: &amp; Some bitch talkin ..."
+Skip line: 
+Skip line: *Bros* Sup pussy? (Friendship lasts forever)"
+Skip line: 
+Skip line: And that tells you everything you need to know abo&#8230;"
+Skip line: Fuck the redskins."
+Skip line: 
+Skip line: https://t.co/1TI5K1f1sf"
+Skip line: 
+Skip line: Basic bitch"
+Skip line: 
+Skip line: WATCH: http://t.co/St6QGJy0j6 http://t.co/7zBGvH&#8230;"
+Skip line: 
+Skip line: #Buffalo:1.000
+Skip line: #NewOrleans:0.0000000000000
+Skip line: 
+Skip line: #FuckByrd
+Skip line: #WhoNe&#8230;"
+Skip line: http://t.co/uKCdyM7kbx"
+Skip line: 
+Skip line: --- Vincent Van Gogh"
+Skip line: Well ex-Iron Maiden member, Tony Moor, will be busking outside Balham train station from &#8230;"
+Skip line: 
+Skip line: *has dinner with family*
+Skip line: 
+Skip line: ""I hate everyone!""
+Skip line: 
+Skip line: *defends 45 people when I call them cunts*"
+Skip line: Is like a drug&#128138;&#128553;&#128079;"
+Skip line: 
+Skip line: Off top."
+Skip line: 
+Skip line: ""You think the bitches gon fuck with this pic?"" http://t.co/dTtZPLIpkm"" LMA&#8230;"
+Skip line: Trek gang bitch we hustle"
+Skip line: pussy for $65.....it was $80!!!"" http://t.co/sHPh98KzOY"
+Skip line: 
+Skip line: https://t.co/9l5E8kKW7D"
+Skip line: &#8226; http://t.co/0lowkClb"
+Skip line: Throwing the pussy like they 32&#128105;
+Skip line: Turning up &#128070; like they 25 &#128111;&#128111;
+Skip line: But can't pass algebra 1?&#128557;&#128514;&#128128;&#9995;"
+Skip line: 
+Skip line: @Browns win a game that felt like a loss,failed ex-Browns QB's duel each other, and @cavs lose ho&#8230;"
+Skip line: 
+Skip line: 7-yard slant gives Arizona the 7-0 lead.
+Skip line: 
+Skip line: 8 plays, 79 yds"
+Skip line: 
+Skip line: Racist: ha, those niggers stopped callin each other nigga 
+Skip line: 
+Skip line: The end"
+Skip line: Believe in Are Spiritual Damn Things&#180; http://t.co/NwgiJ1mjia"
+Skip line: BMTH
+Skip line: ADTR
+Skip line: PTV
+Skip line: YMAS
+Skip line: SWS
+Skip line: ATL
+Skip line: OM&amp;M
+Skip line: AA
+Skip line: MIW
+Skip line: BTF
+Skip line: WCAR
+Skip line: MCR
+Skip line: AFI
+Skip line: PE
+Skip line: BVB
+Skip line: WIM
+Skip line: BC
+Skip line: SS
+Skip line: CTE
+Skip line: NSN
+Skip line: GD
+Skip line: WATIC
+Skip line: AA!
+Skip line: BFMV
+Skip line: FOB
+Skip line: F&#8230;"
+Skip line: Native Americans. #changethename #HTTR @redskinsfacts @redskins http://t.co/23VGQvEHy5"
+Skip line: Grab ya hoodies Cause it's freezing hoe, freezing hoe &#128514;&#128514;&#128514; http://t.co/eC7dT54u&#8230;"
+Skip line: People bitch about not getting what car they want when they want it, and its free&#8230;"
+Skip line: 
+Skip line: Bae: Was her pussy good
+Skip line: 
+Skip line: Me: Whos &#128517;
+Skip line: 
+Skip line: Bae: oh never mind http://t.co/iEc6bdqzoW"
+Skip line: Was always good to go
+Skip line: Little touch of boated man
+Skip line: And she began to flow
+Skip line: 
+Skip line: #HallmarkNostraCollecti&#8230;"
+Skip line: Fancy bitch"
+Skip line: 
+Skip line: me: http://t.co/On9Hex5L4t"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 fo&#8230;"
+Skip line: 
+Skip line: Bitches love hand prints on their ass."
+Skip line: 
+Skip line: *Muslim whale attacks US Navy*
+Skip line: *Muslim tiger attacks Zookeeper*
+Skip line: *Muslim bird attacks Eiffel Tower*
+Skip line: *Mu&#8230;"
+Skip line: 
+Skip line: That nigga a supa fag on Dave"
+Skip line: You support killing babies, mock the handicapped, slept your way into Harvard then ditched your hubby &amp; ki&#8230;"
+Skip line: 
+Skip line: I'm back, bitches!!!
+Skip line: 
+Skip line: *dies*"
+Skip line: 
+Skip line: Definition: I'm with some female friends who don't know that I'm referring to them as bitches."
+Skip line: 
+Skip line: A slut will sleep with anyone.
+Skip line: 
+Skip line: A bitch will sleep with anyone... But y&#8230;"
+Skip line: You say no to ratchet pussy, juicy j cant."
+Skip line: The proofs in the bitch face&#128528;&#128528; http://t.co/MVgT4l8&#8230;"
+Skip line: ""Tell me watchu mad foe""&#128170;&#128514; https://t.co/wlvTLgGDPg"
+Skip line: 
+Skip line: #Houston Texans"
+Skip line: #dieselstation"
+Skip line: 
+Skip line: - Verizon"
+Skip line: Me: http://t.co/RGg9IduVsi"
+Skip line: 
+Skip line: #relationshipgoals &gt;&gt;&gt;&gt;&gt; http://t.co/9z9PxVnf89"
+Skip line: 
+Skip line: ""@opnminds: who doesn&#8217;t like it when a random bad bitch hits you up just to s&#8230;"
+Skip line: ""You a hoe anyway"" - a nigga who just got curved but won't accept it"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 &#8230;"
+Skip line: 
+Skip line: ""how many girls do u talk to""
+Skip line: 
+Skip line: ""am I ur side hoe""
+Skip line: 
+Skip line: ""tweet about me so I know it's real"" http://t.co/LB274Gh&#8230;"
+Skip line: 
+Skip line: &#128663;_____________&#128659;
+Skip line: Fuck! There go the 5'o
+Skip line: 
+Skip line: __&#128663;______&#128659;__
+Skip line: Be cool son
+Skip line: 
+Skip line: ___&#128663;&#128659;_____
+Skip line: Man fuck 
+Skip line: 
+Skip line: ___&#128659;___&#128663;____
+Skip line: bitch as&#8230;"
+Skip line: 
+Skip line: Make sure u know &#128073;&#128073; http://t.co/xOO7AjnD8y &#128072;&#128072; http:/&#8230;"
+Skip line: With rose-colored glasses and a gentle &#8230;"
+Skip line: #IStandWithIsr&#8230;"
+Skip line: 
+Skip line: ""You think the bitches gon fuck with this pic?"" http://t.co/k&#8230;"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 &#8230;"
+Skip line: 
+Skip line: 1. Wearing Tapout
+Skip line: 
+Skip line: 2. Shooting up schools
+Skip line: 
+Skip line: 3. Calling you a nigger on Xbox"
+Skip line: ""Two chains...""
+Skip line: ""Gold all in ma chain...""
+Skip line: ""I keep a chain ana hoe...""
+Skip line: ""Niggas staring at ma chai&#8230;"
+Skip line: 
+Skip line: What why?
+Skip line: 
+Skip line: Well your r&#233;sum&#233; is just 'don't be a bitch dude' written on a napkin
+Skip line: 
+Skip line: Don't b&#8230;"
+Skip line: Uniform
+Skip line: Charlie
+Skip line: Kilo."
+Skip line: 
+Skip line: - me, to stupid fucking bitches"
+Skip line: He loves me not *eats a brownie*"
+Skip line: Yankees score 6 runs in bottom of 7th to take 8-7 lead over Red Sox.
+Skip line: The half-inning took THIRTY&#8230;"
+Skip line: &#8226; 5,477 Pass yds (NFL record)
+Skip line: &#8226; 55 Pass TD (NFL record)
+Skip line: &#8226; 450 completions
+Skip line: &#8226; likely ho&#8230;"
+Skip line: &#8226; Gardner: 4-5, HR, RBI, 3 R
+Skip line: &#8226; Teixeira: 1-2, HR, 2 RBI, 3 R htt&#8230;"
+Skip line: 
+Skip line: ChappelleNadal refer to whites as crackers &amp; KKK ht&#8230;"
+Skip line: 
+Skip line: Haha I was trying to get high bitch I'm not trying to turn you on."
+Skip line: 
+Skip line: Yeah I do... a lot of dick."
+Skip line: Loyalty on Weak &#128581; edges incomplete &#128134;
+Skip line: and pussy on REEK &#128553;&#128567;&#127887; &#128514;"
+Skip line: ""I got hoes b "" http://t.co/ACLiqHQ5PV"
+Skip line: She gonna top me regardless @SD_GBE300"
+Skip line: 
+Skip line: I'm not a chocolate, thick, natural haired female
+Skip line: 
+Skip line: Nudes=trash"
+Skip line: 
+Skip line: A7X
+Skip line: PTV
+Skip line: SWS
+Skip line: ATL
+Skip line: BVB
+Skip line: ADTR
+Skip line: BMTH
+Skip line: YMAS
+Skip line: FOB
+Skip line: AA
+Skip line: Blink 182
+Skip line: TDG
+Skip line: SS
+Skip line: FIR
+Skip line: MCR
+Skip line: 
+Skip line: Follow me &amp; everyon&#8230;"
+Skip line: 
+Skip line: ""Hell yea....the hoes gone like that one"" http://t.co/FBZ29aNAVh"
+Skip line: bitch I could leave u , smoke a blunt &amp; forget &#8230;"
+Skip line: Man I make the baddest bitches send me nudes &#128525;&#128539; http://t.co/6tzYXgvqZv"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 for a b&#8230;"
+Skip line: 1.) im sorry
+Skip line: 2.) it won't happen again
+Skip line: 3.) 1 &amp; 2 are lies
+Skip line: 4.) you're a fucking pussy"
+Skip line: Is still a faggot.
+Skip line: #JustBigEThings"
+Skip line: 
+Skip line: http://t.co/9ZxzlHti2M"
+Skip line: 1. It's just lyrics
+Skip line: 2. My friends party so I party 
+Skip line: 3. Men do it too
+Skip line: 4. And vice versa
+Skip line: 5. I was yo&#8230;"
+Skip line: 
+Skip line: Bud Light Platinums: 23 | Shots of Patron: 8 | Side bitches: 5 | Fucks given: 0"
+Skip line: Five nipples and a sideways vagina."
+Skip line: 
+Skip line: unless you a hoe... 
+Skip line: 
+Skip line: then be ashamed bitch."
+Skip line: 
+Skip line: Coworker: There's a dead bird outside.
+Skip line: 
+Skip line: Me: Wanna split it?
+Skip line: 
+Skip line: CW: What?
+Skip line: 
+Skip line: Me: Sorry, finders keepers, ri&#8230;"
+Skip line: Jackelope
+Skip line: Phoenix 
+Skip line: Griffin
+Skip line: Fairy
+Skip line: Unicorn
+Skip line: Pegasus 
+Skip line: A woman that knows where she wants to &#8230;"
+Skip line: Me the truth, let's hope it's not while I'm in it, cause Ima kill u"
+Skip line: 
+Skip line: 1. I'm sorry 
+Skip line: 2. It won't happen again 
+Skip line: 3. 1 &amp; 2 are lies 
+Skip line: 4. You're a pussy"
+Skip line: 
+Skip line: &#12288; Z
+Skip line: &#12288;&#12288; E
+Skip line: &#12288;&#12288;&#12288; R
+Skip line: &#12288;&#12288;&#12288;&#12288; O
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288; o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288;.
+Skip line: &#12288;&#12288;&#12288;."
+Skip line: 
+Skip line: me: ""i'm tryna catch a pokemon""
+Skip line: 
+Skip line: bae: ""i'm horny tho""
+Skip line: 
+Skip line: me: ""bitch it's a fucking mewtwo"""
+Skip line: 
+Skip line: Snail: ok ?
+Skip line: 
+Skip line: Snail hoe: Im horny af
+Skip line: 
+Skip line: Snail:... http:&#8230;"
+Skip line: 
+Skip line: cause I&#8217;m ready for your funeral bitch"
+Skip line: 
+Skip line: Me: http://t.co/qNa9ogveWW"
+Skip line: 
+Skip line: Got to know her.
+Skip line: 
+Skip line: She was a bitch.
+Skip line: 
+Skip line: Felt betrayed by my judgment."
+Skip line: 
+Skip line: Her: Sir those are 13 gallon trash bags!
+Skip line: 
+Skip line: Me: *winks until security escorts me &#8230;"
+Skip line: 
+Skip line: ""Well I wouldn't use that word personally"" I said, ""Like is a st&#8230;"
+Skip line: 
+Skip line: ""It's 2014 man you can use any printer you&#8230;"
+Skip line: 
+Skip line:  NASCARA."
+Skip line: 
+Skip line: Bullshit
+Skip line: Fuck boys
+Skip line: Basic bitches"
+Skip line: &#128514;&#128514;"
+Skip line: 
+Skip line: &#128112; = &#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#128109;&#8230;"
+Skip line: https://t.co/nfAbyILdkX"
+Skip line: 
+Skip line: ""bruh if she tells me to go text my other hoes, but she's one of my hoes, do I keep texting her ? http://t.co/&#8230;"
+Skip line: http://t.co/M8zlTY0fZs
+Skip line: joining forces to take out world's trash h&#8230;"
+Skip line: 
+Skip line:  May 16, 2... http://t.co/2UkcoICd9Q prg #P2"
+Skip line: smashin on these hoes
+Skip line: got me blue in the taco
+Skip line: bae thinks of me flaco
+Skip line: errybody frontin
+Skip line: jus&#8230;"
+Skip line: Me: https://t.co/5hetoweSES"
+Skip line: 
+Skip line: Curls for the girls
+Skip line: 
+Skip line: Planks for the skanks 
+Skip line: 
+Skip line: Deep cuts for the sluts
+Skip line: 
+Skip line: Quads for the broads
+Skip line: 
+Skip line: No pecs No s&#8230;"
+Skip line: https://t.&#8230;"
+Skip line: she's just like DUH bitch &#128129; 
+Skip line: lol i don't give a fuck &#128129; 
+Skip line: you're ugly &#128129; 
+Skip line: whatcha gonna do about it &#128129;&#8230;"
+Skip line: 
+Skip line: Curls for the girls
+Skip line: 
+Skip line: Planks for the skanks 
+Skip line: 
+Skip line: Deep cuts for the sluts
+Skip line: 
+Skip line: Quads for the broads
+Skip line: 
+Skip line: No pecs N&#8230;"
+Skip line: 
+Skip line: - Pallbearers"
+Skip line: 
+Skip line: Hard to come across girls who aren't overly social and friendly with everyone."
+Skip line: 
+Skip line: Ur pussy still trash."
+Skip line: 
+Skip line: its a bitch"
+Skip line: 
+Skip line: *puts heelys into full gear*
+Skip line: 
+Skip line: *glides past the bitches*"
+Skip line: 
+Skip line: me: bitch i only have eyes for da paper
+Skip line: 
+Skip line: *throws cash everywhere*"
+Skip line: fav for a bitch nigga http://t.co/y4yIc38qWS"
+Skip line: fav for the bitch niggas http://t.co/c7WP1bLUUk"
+Skip line: Ellsbury CF
+Skip line: Jeter SS
+Skip line: Beltran DH
+Skip line: Soriano LF
+Skip line: Teixeira 1B
+Skip line: McCann C
+Skip line: Solarte 3B
+Skip line: Ichiro RF
+Skip line: Roberts 2B
+Skip line: T&#8230;"
+Skip line: 
+Skip line: duhh BITCH she a HOE !!!!!!"
+Skip line: 
+Skip line: ""Nah bitch look what I'm eating cause of you"" http://t.co/7cvA8grvds"
+Skip line: 
+Skip line: I wish, I wish, I wish, you would bitch"
+Skip line: Where's your bitch, nigga? We control her"
+Skip line: 
+Skip line:  No you aint hoe"
+Skip line: &#8220;@uce_INA: &#128514;&#128557;&#128514;&#128557;&#128514;&#128557;&#128514; koula noooooooo https://&#8230;"
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: 
+Skip line: .
+Skip line: Somebody lien&#128530;&#128530;"
+Skip line: 
+Skip line: WOOOOH
+Skip line: 
+Skip line: You &#8230;"
+Skip line: 
+Skip line: Me: Baby I cooked
+Skip line: Bae: What's for dinner?
+Skip line: Me: That bitch you been texting http://t.co/GwT19xIXUz"
+Skip line: a queen with Goals&#10067;"
+Skip line: ."
+Skip line: 
+Skip line: ur a lil bitch and im 10"
+Skip line: to the last drop
+Skip line: washing teapot 
+Skip line: #haiku #mijikai"
+Skip line: 
+Skip line: ""excuse me""
+Skip line: 
+Skip line: ""i&#8217;m done with fake bitches. the hw. all of it. done""
+Skip line: 
+Skip line: ""ur in 2nd grad&#8230;"
+Skip line: 
+Skip line:  no no no
+Skip line:  no no
+Skip line:  no \_ no
+Skip line:  no no
+Skip line:  &#8230;"
+Skip line: 
+Skip line: ""Nigga so is this pussy since we statin facts"" &#128557;"
+Skip line: This doesn't even taste like hippo."
+Skip line: 
+Skip line: Jk 3phone you pull all the hoes wit the nice weaves"
+Skip line: 
+Skip line: ""You think the bitches gon fuck with this pic?"" http://t.co/n4BzYk1DH4"
+Skip line: 
+Skip line: &#8226; i'm a worthless piece of shit who deserves no love 
+Skip line:  
+Skip line: &#8226; bow down before me bitches i am you&#8230;"
+Skip line: You give me one day, I'll purge on that pussy yoooo"
+Skip line:  http://t.co/sM1rsmOLEZ"
+Skip line: ya titties trash"
+Skip line: 
+Skip line: Me: http://t.co/kKk5pSBv9F"
+Skip line: bro(was)ken
+Skip line: bec(a)use
+Skip line: s(side)he
+Skip line: beli(hoe)ved"
+Skip line: 
+Skip line: moon: goodnight lil bitch"
+Skip line: 
+Skip line: wo&#8230;"
+Skip line: 
+Skip line: &#12288; N
+Skip line: &#12288;&#12288; O
+Skip line: &#12288;&#12288;&#12288; O
+Skip line: &#12288;&#12288;&#12288;&#12288; o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288; o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288;.
+Skip line: &#12288;&#12288;&#12288;.
+Skip line: &#12288;&#12288;&#12288; .
+Skip line: &#12288;&#12288;&#12288;&#12288;."
+Skip line: 
+Skip line: 1. Brag bout loyalty 
+Skip line: 2. Call other females hoes
+Skip line: 3. Song lyrics
+Skip line: 4. Complain bout cramps
+Skip line: 5. Twee&#8230;"
+Skip line: 
+Skip line:  http://t.co/yCTT56cXK5
+Skip line: 
+Skip line:  #f&#8230;"
+Skip line:  http://t.co/gMK&#8230;"
+Skip line: ""Go on, tell em I ate your bitch ass homework. they ain't never gunna believe your dumb ass"" http://t.co/wLN&#8230;"
+Skip line: *faster rapping voice* that bitch can suck my dick"
+Skip line: 
+Skip line: &#12288; N
+Skip line: &#12288;&#12288; O
+Skip line: &#12288;&#12288;&#12288; O
+Skip line: &#12288;&#12288;&#12288;&#12288; o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288; o
+Skip line: &#12288;&#12288;&#12288;&#12288;&#12288;o
+Skip line: &#12288;&#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288; &#12290;
+Skip line: &#12288;&#12288;&#12288;.
+Skip line: &#12288;&#12288;&#12288;.
+Skip line: &#12288;&#12288;&#12288; .
+Skip line: &#12288;&#12288;&#12288;&#12288;."
+Skip line: leave 'em both alone and continue with your work"" - Q-Tip"
+Skip line: 
+Skip line: #theperfectanswer &#127942;"
+Skip line: 
+Skip line: 1) dream catchers 
+Skip line: 
+Skip line: 2) bird feathers 
+Skip line: 
+Skip line: 3) inspirational quotes that they dont live by 
+Skip line: 
+Skip line: 4) animal p&#8230;"
+Skip line: 
+Skip line: @Eminem Artist Of The Year #AMAs http://t.co/1MENiz4urw"
+Skip line: Doc Martens -enjoying anal sex 
+Skip line: Girbaud -Posers, wiggers, fake bangers. Now accountants
+Skip line: Jncos -Domin&#8230;"
+Skip line: But if you got the one you really like then you a lucky bitch."
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 for a ba&#8230;"
+Skip line: My bitch a fashion killa, she be busy poppin' tags&#127926;"
+Skip line: RIP Greg Sikorskey
+Skip line: RIP Charlie Anaya
+Skip line: RIP Wells Crowther
+Skip line: RIP Andy Fredericks"
+Skip line: 
+Skip line: Grateful to be out of the hot sun, it winked at me with its rotting eye socket."
+Skip line: http:&#8230;"
+Skip line: 
+Skip line: u are a pink starburst"
+Skip line: The cold: haha yeah right I fucked your car and your bitch"
+Skip line: 
+Skip line: Karma, it's a bitch! http&#8230;"
+Skip line: -traprinthions 10:17"
+Skip line: 
+Skip line: ""If a guy talk to 5 girls is he a hoe or does he have hoes?"" http://t.co/ypwO5rQwLd"
+Skip line: Sometimes being a bitch is necessary.
+Skip line: Stick to your guns.
+Skip line: Impromptu solo dance parties are good fo&#8230;"
+Skip line: u is for ur a cunt
+Skip line: n is for not sure u know this but ur a cunt
+Skip line: t is for turn around bitch; ur a cunt"
+Skip line: Ebola
+Skip line: Ebola
+Skip line: Ebola
+Skip line: I hate school 
+Skip line: Ebola 
+Skip line: Ebola
+Skip line: Some twitter hoes selfie
+Skip line: Ebola
+Skip line: Ebola
+Skip line: Pull out ga&#8230;"
+Skip line: 
+Skip line: #Seahawks are complete trash!!"
+Skip line: Get rid of Your Ex's 
+Skip line: &#128694;&#128694;&#128694;&#128694;&#128694;&#128694;&#128694;
+Skip line: 
+Skip line: Get rid of Your hoes
+Skip line: &#128131;&#128131;&#128131;&#128131;&#128131;&#128131;&#128131;
+Skip line: 
+Skip line: We don't Need No interference
+Skip line: &#128525;&#128145;&#128107;&#128141;&#128536;&#128143;&#10084;&#65039;&#128175;"
+Skip line: 
+Skip line: deleted at 100k for booking email backpagepussy@gmail.com"
+Skip line: 
+Skip line: This is the same man that wants to be ""Godly""...."
+Skip line: 
+Skip line: https://t.co/TSb0xljRNy&#8221;lol"
+Skip line: &#8212; Michael Clifford, role model and inspiration to many"
+Skip line: 
+Skip line: While these Shrek looking bitches, walk around thinking their the shit &#128129;"
+Skip line: thats some crazy shit."
+Skip line: 
+Skip line: ....it tests my ability to keep calm and not slap a bitch"
+Skip line: Get rid of ya Ex's 
+Skip line: &#128694;&#128694;&#128694;&#128694;&#128694;&#128694;
+Skip line: 
+Skip line: I'll get rid of my hoes
+Skip line: &#128131;&#128131;&#128131;&#128131;&#128131;&#128131;&#128131;
+Skip line: 
+Skip line: We don't need NO interference 
+Skip line: &#128525;&#128145;&#128107;&#128141;&#128141;&#128149;&#128175;"
+Skip line: 1. My DMs don't work
+Skip line: 2. Why is my twitter unfollowing people
+Skip line: 3. I'm not a hoe"
+Skip line: Mens #Health Tips Sex Toy http://t.co/Hxmlrj1w6m The Adult Toys #KISS&#8230;"
+Skip line: @veritaz @marvisirmed 
+Skip line: @Goshno @AliyaNazki &#8230;"
+Skip line:  fallin off a bike is a accident! 
+Skip line: I ain't never seen a bitch trip &amp; land on no dick!"
+Skip line: 
+Skip line: NOOO ""my nuts bitch"" &#128514;&#128553;&#128553;&#128553;&#128553;&#128553;"
+Skip line: E-veryone's
+Skip line: M-oney &amp;
+Skip line: O-bjects
+Skip line: C-ollectively be
+Skip line: R-edistributed
+Skip line: A-mong
+Skip line: T-heir
+Skip line: S-upporters"
+Skip line: 
+Skip line: Me: http://t.co/YuDDsljbQN"
+Skip line: 
+Skip line: i am do&#8230;"
+Skip line: bitch put me with the trees
+Skip line: let me rot
+Skip line: throw some seeds
+Skip line: water me and give me leaves"
+Skip line: Its falling out of love that's a bitch."
+Skip line: 
+Skip line: *uses hoe in her name* http://t.co/tSNzJgPye4"
+Skip line: This dude told yo ass on MULTIPLE occasions to let this bitch be."
+Skip line: ppl always expect you to be like, ""i'm sorry if i got loud."" or, ""i'm sorry to s&#8230;"
+Skip line: that's one less person &#8230;"
+Skip line: 
+Skip line: ""With your yellow skin and red hair you look like a #2 pencil.""
+Skip line: 
+Skip line: https://t.co/U&#8230;"
+Skip line: #ChicagoPolitics in the WH &amp; Harry Reid is his bitch. http://t.co/x&#8230;"
+Skip line: 
+Skip line: She's just like any other female with a pussy so who &#8230;"
+Skip line: Pussy hungry bitch &#128514;&#8221;look at me never hungry http://t.co/zRN&#8230;"
+Skip line: Jam out with your clam out"
+Skip line: 
+Skip line: grab her booty in front of bitches that want you"
+Skip line: Me: http://t.co/WjFjmsf8aV"
+Skip line: 
+Skip line: then don't fucken say bye you dumb bitch."
+Skip line: You the same hoe you was last year
+Skip line: Chill the fuck out"
+Skip line: - Proud African American
+Skip line: 
+Skip line: ""I'm proud to be white"" 
+Skip line: - Racist
+Skip line: &#8230;"
+Skip line: Unless that pussy got some super powers"
+Skip line: 
+Skip line: Twitter bitches have it all."
+Skip line: 
+Skip line: nobody 
+Skip line: 
+Skip line: likes 
+Skip line: 
+Skip line: you 
+Skip line: 
+Skip line: because 
+Skip line: 
+Skip line: you're 
+Skip line: 
+Skip line: a 
+Skip line: 
+Skip line: bitch"
+Skip line: bc tomorrow's 6 months &#128152;
+Skip line: Fuck everyone who said we wouldn't last. Proved you bitches wrong @tropicaldrew_ http://t.&#8230;"
+Skip line: 
+Skip line: plea"
+Skip line: @onedirection artist of the year #AMAs
+Skip line: #EMABiggestFans1D http://t.co/9O1zfvlezV"
+Skip line: 
+Skip line: http://t.co/2ew0jjhB6n"
+Skip line: 
+Skip line: Use &#8220;SAVE20&#8221; at checkout 
+Skip line:  
+Skip line: http://t.co/x5bq5vzpPK"
+Skip line: 
+Skip line: If you call #MichaelBrown a thug at this point, just say ""nigger"" cuz it's &#8230;"
+Skip line: 
+Skip line: no u might be stupid if u pay 4.99 for a b&#8230;"
+Wrote 20000 entries.
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ hadoop fs -put tweets-seq tweets-seq
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ mahout seq2sparse -i tweets-seq/chunk-0 -o tweets-vectors
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /home/hdoop/hadoop-1.1.1/bin/hadoop and HADOOP_CONF_DIR=/home/hdoop/hadoop-1.1.1/conf
+MAHOUT-JOB: /home/hdoop/mahout-distribution-0.7/mahout-examples-0.7-job.jar
+22/04/18 23:37:05 INFO vectorizer.SparseVectorsFromSequenceFiles: Maximum n-gram size is: 1
+22/04/18 23:37:05 INFO vectorizer.SparseVectorsFromSequenceFiles: Minimum LLR value: 1.0
+22/04/18 23:37:05 INFO vectorizer.SparseVectorsFromSequenceFiles: Number of reduce tasks: 1
+22/04/18 23:37:05 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+22/04/18 23:37:05 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:05 INFO mapred.JobClient: Running job: job_local_0001
+22/04/18 23:37:05 INFO util.ProcessTree: setsid exited with exit code 0
+22/04/18 23:37:05 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@6eb4a128
+22/04/18 23:37:06 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:06 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:06 INFO mapred.Task: Task attempt_local_0001_m_000000_0 is allowed to commit now
+22/04/18 23:37:06 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_m_000000_0' to tweets-vectors/tokenized-documents
+22/04/18 23:37:06 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:06 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+22/04/18 23:37:06 INFO mapred.JobClient:  map 100% reduce 0%
+22/04/18 23:37:06 INFO mapred.JobClient: Job complete: job_local_0001
+22/04/18 23:37:06 INFO mapred.JobClient: Counters: 14
+22/04/18 23:37:06 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:06 INFO mapred.JobClient:     Spilled Records=0
+22/04/18 23:37:06 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:06 INFO mapred.JobClient:     Map input records=20000
+22/04/18 23:37:06 INFO mapred.JobClient:     SPLIT_RAW_BYTES=116
+22/04/18 23:37:06 INFO mapred.JobClient:     Map output records=20000
+22/04/18 23:37:06 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:06 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:06 INFO mapred.JobClient:     Total committed heap usage (bytes)=390594560
+22/04/18 23:37:06 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:06 INFO mapred.JobClient:     Bytes Read=2089495
+22/04/18 23:37:06 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:06 INFO mapred.JobClient:     HDFS_BYTES_READ=2089495
+22/04/18 23:37:06 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=30318095
+22/04/18 23:37:06 INFO mapred.JobClient:     FILE_BYTES_READ=30037570
+22/04/18 23:37:06 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=1870080
+22/04/18 23:37:06 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:06 INFO mapred.JobClient:     Bytes Written=1870080
+22/04/18 23:37:06 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:06 INFO mapred.JobClient: Running job: job_local_0002
+22/04/18 23:37:06 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@58fe900e
+22/04/18 23:37:06 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:06 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:06 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:07 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:07 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:07 INFO mapred.Task: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:07 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:07 INFO mapred.Task: Task 'attempt_local_0002_m_000000_0' done.
+22/04/18 23:37:07 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3feefcef
+22/04/18 23:37:07 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:07 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:07 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 626944 bytes
+22/04/18 23:37:07 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:07 INFO mapred.Task: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:07 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:07 INFO mapred.Task: Task attempt_local_0002_r_000000_0 is allowed to commit now
+22/04/18 23:37:07 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0002_r_000000_0' to tweets-vectors/wordcount
+22/04/18 23:37:07 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:07 INFO mapred.Task: Task 'attempt_local_0002_r_000000_0' done.
+22/04/18 23:37:07 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:07 INFO mapred.JobClient: Job complete: job_local_0002
+22/04/18 23:37:07 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:07 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:07 INFO mapred.JobClient:     Spilled Records=64676
+22/04/18 23:37:07 INFO mapred.JobClient:     Map output materialized bytes=626948
+22/04/18 23:37:07 INFO mapred.JobClient:     Reduce input records=32338
+22/04/18 23:37:07 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:07 INFO mapred.JobClient:     Map input records=20000
+22/04/18 23:37:07 INFO mapred.JobClient:     SPLIT_RAW_BYTES=145
+22/04/18 23:37:07 INFO mapred.JobClient:     Map output bytes=3190981
+22/04/18 23:37:07 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:07 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:07 INFO mapred.JobClient:     Reduce input groups=32338
+22/04/18 23:37:07 INFO mapred.JobClient:     Combine output records=32338
+22/04/18 23:37:07 INFO mapred.JobClient:     Reduce output records=11335
+22/04/18 23:37:07 INFO mapred.JobClient:     Map output records=227197
+22/04/18 23:37:07 INFO mapred.JobClient:     Combine input records=227197
+22/04/18 23:37:07 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:07 INFO mapred.JobClient:     Total committed heap usage (bytes)=981467136
+22/04/18 23:37:07 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:07 INFO mapred.JobClient:     Bytes Read=1870080
+22/04/18 23:37:07 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:07 INFO mapred.JobClient:     HDFS_BYTES_READ=7919150
+22/04/18 23:37:07 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=122527494
+22/04/18 23:37:07 INFO mapred.JobClient:     FILE_BYTES_READ=120777286
+22/04/18 23:37:07 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=4015888
+22/04/18 23:37:07 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:07 INFO mapred.JobClient:     Bytes Written=275728
+22/04/18 23:37:08 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:08 INFO filecache.TrackerDistributedCacheManager: Creating dictionary.file-0 in /tmp/hadoop-hdoop/mapred/local/archive/-4762205288886184290_1881043405_1037787022/localhosttweets-vectors-work-6441863458353141705 with rwxr-xr-x
+22/04/18 23:37:08 INFO filecache.TrackerDistributedCacheManager: Cached tweets-vectors/dictionary.file-0 as /tmp/hadoop-hdoop/mapred/local/archive/-4762205288886184290_1881043405_1037787022/localhosttweets-vectors/dictionary.file-0
+22/04/18 23:37:08 INFO filecache.TrackerDistributedCacheManager: Cached tweets-vectors/dictionary.file-0 as /tmp/hadoop-hdoop/mapred/local/archive/-4762205288886184290_1881043405_1037787022/localhosttweets-vectors/dictionary.file-0
+22/04/18 23:37:08 INFO mapred.JobClient: Running job: job_local_0003
+22/04/18 23:37:08 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@4cb33b8e
+22/04/18 23:37:08 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:08 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:08 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:08 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:08 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:08 INFO mapred.Task: Task:attempt_local_0003_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:08 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:08 INFO mapred.Task: Task 'attempt_local_0003_m_000000_0' done.
+22/04/18 23:37:08 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7a949efd
+22/04/18 23:37:08 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:08 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:08 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 1733261 bytes
+22/04/18 23:37:08 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:08 INFO mapred.Task: Task:attempt_local_0003_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:08 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:08 INFO mapred.Task: Task attempt_local_0003_r_000000_0 is allowed to commit now
+22/04/18 23:37:08 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0003_r_000000_0' to tweets-vectors/partial-vectors-0
+22/04/18 23:37:08 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:08 INFO mapred.Task: Task 'attempt_local_0003_r_000000_0' done.
+22/04/18 23:37:09 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:09 INFO mapred.JobClient: Job complete: job_local_0003
+22/04/18 23:37:09 INFO mapred.JobClient: Counters: 23
+22/04/18 23:37:09 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:09 INFO mapred.JobClient:     Spilled Records=40000
+22/04/18 23:37:09 INFO mapred.JobClient:     Map output materialized bytes=1733265
+22/04/18 23:37:09 INFO mapred.JobClient:     Reduce input records=20000
+22/04/18 23:37:09 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:09 INFO mapred.JobClient:     Map input records=20000
+22/04/18 23:37:09 INFO mapred.JobClient:     SPLIT_RAW_BYTES=145
+22/04/18 23:37:09 INFO mapred.JobClient:     Map output bytes=1691931
+22/04/18 23:37:09 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:09 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:09 INFO mapred.JobClient:     Reduce input groups=20000
+22/04/18 23:37:09 INFO mapred.JobClient:     Combine output records=0
+22/04/18 23:37:09 INFO mapred.JobClient:     Reduce output records=19958
+22/04/18 23:37:09 INFO mapred.JobClient:     Map output records=20000
+22/04/18 23:37:09 INFO mapred.JobClient:     Combine input records=0
+22/04/18 23:37:09 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:09 INFO mapred.JobClient:     Total committed heap usage (bytes)=909115392
+22/04/18 23:37:09 INFO mapred.JobClient:   TFParticalVectorReducer
+22/04/18 23:37:09 INFO mapred.JobClient:     emptyVectorCount=42
+22/04/18 23:37:09 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:09 INFO mapred.JobClient:     Bytes Read=1870080
+22/04/18 23:37:09 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:09 INFO mapred.JobClient:     HDFS_BYTES_READ=12900607
+22/04/18 23:37:09 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=187098314
+22/04/18 23:37:09 INFO mapred.JobClient:     FILE_BYTES_READ=183212697
+22/04/18 23:37:09 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=7244449
+22/04/18 23:37:09 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:09 INFO mapred.JobClient:     Bytes Written=2492939
+22/04/18 23:37:09 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:09 INFO mapred.JobClient: Running job: job_local_0004
+22/04/18 23:37:09 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@131ba20
+22/04/18 23:37:09 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:09 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:09 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:09 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:09 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:09 INFO mapred.Task: Task:attempt_local_0004_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:09 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:09 INFO mapred.Task: Task 'attempt_local_0004_m_000000_0' done.
+22/04/18 23:37:09 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@216e0ac5
+22/04/18 23:37:09 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:09 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:09 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 2355843 bytes
+22/04/18 23:37:09 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:09 INFO mapred.Task: Task:attempt_local_0004_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:09 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:09 INFO mapred.Task: Task attempt_local_0004_r_000000_0 is allowed to commit now
+22/04/18 23:37:09 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0004_r_000000_0' to tweets-vectors/tf-vectors
+22/04/18 23:37:09 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:09 INFO mapred.Task: Task 'attempt_local_0004_r_000000_0' done.
+22/04/18 23:37:10 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:10 INFO mapred.JobClient: Job complete: job_local_0004
+22/04/18 23:37:10 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:10 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:10 INFO mapred.JobClient:     Spilled Records=39916
+22/04/18 23:37:10 INFO mapred.JobClient:     Map output materialized bytes=2355847
+22/04/18 23:37:10 INFO mapred.JobClient:     Reduce input records=19958
+22/04/18 23:37:10 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:10 INFO mapred.JobClient:     Map input records=19958
+22/04/18 23:37:10 INFO mapred.JobClient:     SPLIT_RAW_BYTES=143
+22/04/18 23:37:10 INFO mapred.JobClient:     Map output bytes=2309345
+22/04/18 23:37:10 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:10 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:10 INFO mapred.JobClient:     Reduce input groups=19958
+22/04/18 23:37:10 INFO mapred.JobClient:     Combine output records=0
+22/04/18 23:37:10 INFO mapred.JobClient:     Reduce output records=19958
+22/04/18 23:37:10 INFO mapred.JobClient:     Map output records=19958
+22/04/18 23:37:10 INFO mapred.JobClient:     Combine input records=0
+22/04/18 23:37:10 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:10 INFO mapred.JobClient:     Total committed heap usage (bytes)=810549248
+22/04/18 23:37:10 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:10 INFO mapred.JobClient:     Bytes Read=2492939
+22/04/18 23:37:10 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:10 INFO mapred.JobClient:     HDFS_BYTES_READ=18116432
+22/04/18 23:37:10 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=252447968
+22/04/18 23:37:10 INFO mapred.JobClient:     FILE_BYTES_READ=247377003
+22/04/18 23:37:10 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=12230327
+22/04/18 23:37:10 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:10 INFO mapred.JobClient:     Bytes Written=2492939
+22/04/18 23:37:10 INFO common.HadoopUtil: Deleting tweets-vectors/partial-vectors-0
+22/04/18 23:37:10 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:10 INFO mapred.JobClient: Running job: job_local_0005
+22/04/18 23:37:10 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@50c504a
+22/04/18 23:37:10 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:10 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:10 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:10 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:10 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:10 INFO mapred.Task: Task:attempt_local_0005_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:10 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:10 INFO mapred.Task: Task 'attempt_local_0005_m_000000_0' done.
+22/04/18 23:37:10 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@906b3be
+22/04/18 23:37:10 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:10 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:10 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 158706 bytes
+22/04/18 23:37:10 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:10 INFO mapred.Task: Task:attempt_local_0005_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:10 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:10 INFO mapred.Task: Task attempt_local_0005_r_000000_0 is allowed to commit now
+22/04/18 23:37:10 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0005_r_000000_0' to tweets-vectors/df-count
+22/04/18 23:37:10 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:10 INFO mapred.Task: Task 'attempt_local_0005_r_000000_0' done.
+22/04/18 23:37:11 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:11 INFO mapred.JobClient: Job complete: job_local_0005
+22/04/18 23:37:11 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:11 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:11 INFO mapred.JobClient:     Spilled Records=22672
+22/04/18 23:37:11 INFO mapred.JobClient:     Map output materialized bytes=158710
+22/04/18 23:37:11 INFO mapred.JobClient:     Reduce input records=11336
+22/04/18 23:37:11 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:11 INFO mapred.JobClient:     Map input records=19958
+22/04/18 23:37:11 INFO mapred.JobClient:     SPLIT_RAW_BYTES=136
+22/04/18 23:37:11 INFO mapred.JobClient:     Map output bytes=2713824
+22/04/18 23:37:11 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:11 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:11 INFO mapred.JobClient:     Reduce input groups=11336
+22/04/18 23:37:11 INFO mapred.JobClient:     Combine output records=11336
+22/04/18 23:37:11 INFO mapred.JobClient:     Reduce output records=11336
+22/04/18 23:37:11 INFO mapred.JobClient:     Map output records=226152
+22/04/18 23:37:11 INFO mapred.JobClient:     Combine input records=226152
+22/04/18 23:37:11 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:11 INFO mapred.JobClient:     Total committed heap usage (bytes)=794820608
+22/04/18 23:37:11 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:11 INFO mapred.JobClient:     Bytes Read=2492939
+22/04/18 23:37:11 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:11 INFO mapred.JobClient:     HDFS_BYTES_READ=23102310
+22/04/18 23:37:11 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=313402614
+22/04/18 23:37:11 INFO mapred.JobClient:     FILE_BYTES_READ=309966740
+22/04/18 23:37:11 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=14952339
+22/04/18 23:37:11 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:11 INFO mapred.JobClient:     Bytes Written=229073
+22/04/18 23:37:11 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:11 INFO filecache.TrackerDistributedCacheManager: Creating frequency.file-0 in /tmp/hadoop-hdoop/mapred/local/archive/7846031833246299101_-1793538853_1037790342/localhosttweets-vectors-work-5159278646607793307 with rwxr-xr-x
+22/04/18 23:37:11 INFO filecache.TrackerDistributedCacheManager: Cached tweets-vectors/frequency.file-0 as /tmp/hadoop-hdoop/mapred/local/archive/7846031833246299101_-1793538853_1037790342/localhosttweets-vectors/frequency.file-0
+22/04/18 23:37:11 INFO filecache.TrackerDistributedCacheManager: Cached tweets-vectors/frequency.file-0 as /tmp/hadoop-hdoop/mapred/local/archive/7846031833246299101_-1793538853_1037790342/localhosttweets-vectors/frequency.file-0
+22/04/18 23:37:11 INFO mapred.JobClient: Running job: job_local_0006
+22/04/18 23:37:11 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@763444f6
+22/04/18 23:37:11 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:11 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:11 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:11 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:11 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:11 INFO mapred.Task: Task:attempt_local_0006_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:11 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:11 INFO mapred.Task: Task 'attempt_local_0006_m_000000_0' done.
+22/04/18 23:37:11 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@6c676e84
+22/04/18 23:37:11 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:11 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:11 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 2355843 bytes
+22/04/18 23:37:11 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:11 INFO mapred.Task: Task:attempt_local_0006_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:11 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:11 INFO mapred.Task: Task attempt_local_0006_r_000000_0 is allowed to commit now
+22/04/18 23:37:11 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0006_r_000000_0' to tweets-vectors/partial-vectors-0
+22/04/18 23:37:11 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:11 INFO mapred.Task: Task 'attempt_local_0006_r_000000_0' done.
+22/04/18 23:37:12 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:12 INFO mapred.JobClient: Job complete: job_local_0006
+22/04/18 23:37:12 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:12 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:12 INFO mapred.JobClient:     Spilled Records=39916
+22/04/18 23:37:12 INFO mapred.JobClient:     Map output materialized bytes=2355847
+22/04/18 23:37:12 INFO mapred.JobClient:     Reduce input records=19958
+22/04/18 23:37:12 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:12 INFO mapred.JobClient:     Map input records=19958
+22/04/18 23:37:12 INFO mapred.JobClient:     SPLIT_RAW_BYTES=136
+22/04/18 23:37:12 INFO mapred.JobClient:     Map output bytes=2309345
+22/04/18 23:37:12 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:12 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:12 INFO mapred.JobClient:     Reduce input groups=19958
+22/04/18 23:37:12 INFO mapred.JobClient:     Combine output records=0
+22/04/18 23:37:12 INFO mapred.JobClient:     Reduce output records=19958
+22/04/18 23:37:12 INFO mapred.JobClient:     Map output records=19958
+22/04/18 23:37:12 INFO mapred.JobClient:     Combine input records=0
+22/04/18 23:37:12 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:12 INFO mapred.JobClient:     Total committed heap usage (bytes)=876609536
+22/04/18 23:37:12 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:12 INFO mapred.JobClient:     Bytes Read=2492939
+22/04/18 23:37:12 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:12 INFO mapred.JobClient:     HDFS_BYTES_READ=29233493
+22/04/18 23:37:12 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=379216226
+22/04/18 23:37:12 INFO mapred.JobClient:     FILE_BYTES_READ=372556477
+22/04/18 23:37:12 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=18132457
+22/04/18 23:37:12 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:12 INFO mapred.JobClient:     Bytes Written=2492939
+22/04/18 23:37:12 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:12 INFO mapred.JobClient: Running job: job_local_0007
+22/04/18 23:37:12 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@4cdf4d17
+22/04/18 23:37:12 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:12 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:12 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:12 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:12 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:12 INFO mapred.Task: Task:attempt_local_0007_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:12 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:12 INFO mapred.Task: Task 'attempt_local_0007_m_000000_0' done.
+22/04/18 23:37:12 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@217de7e2
+22/04/18 23:37:12 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:12 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:12 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 2355843 bytes
+22/04/18 23:37:12 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:12 INFO mapred.Task: Task:attempt_local_0007_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:12 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:12 INFO mapred.Task: Task attempt_local_0007_r_000000_0 is allowed to commit now
+22/04/18 23:37:12 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0007_r_000000_0' to tweets-vectors/tfidf-vectors
+22/04/18 23:37:12 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:12 INFO mapred.Task: Task 'attempt_local_0007_r_000000_0' done.
+22/04/18 23:37:13 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:13 INFO mapred.JobClient: Job complete: job_local_0007
+22/04/18 23:37:13 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:13 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:13 INFO mapred.JobClient:     Spilled Records=39916
+22/04/18 23:37:13 INFO mapred.JobClient:     Map output materialized bytes=2355847
+22/04/18 23:37:13 INFO mapred.JobClient:     Reduce input records=19958
+22/04/18 23:37:13 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:13 INFO mapred.JobClient:     Map input records=19958
+22/04/18 23:37:13 INFO mapred.JobClient:     SPLIT_RAW_BYTES=143
+22/04/18 23:37:13 INFO mapred.JobClient:     Map output bytes=2309345
+22/04/18 23:37:13 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:13 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:13 INFO mapred.JobClient:     Reduce input groups=19958
+22/04/18 23:37:13 INFO mapred.JobClient:     Combine output records=0
+22/04/18 23:37:13 INFO mapred.JobClient:     Reduce output records=19958
+22/04/18 23:37:13 INFO mapred.JobClient:     Map output records=19958
+22/04/18 23:37:13 INFO mapred.JobClient:     Combine input records=0
+22/04/18 23:37:13 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:13 INFO mapred.JobClient:     Total committed heap usage (bytes)=878706688
+22/04/18 23:37:13 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:13 INFO mapred.JobClient:     Bytes Read=2492939
+22/04/18 23:37:13 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:13 INFO mapred.JobClient:     HDFS_BYTES_READ=34448424
+22/04/18 23:37:13 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=444565876
+22/04/18 23:37:13 INFO mapred.JobClient:     FILE_BYTES_READ=437343365
+22/04/18 23:37:13 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=23118335
+22/04/18 23:37:13 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:13 INFO mapred.JobClient:     Bytes Written=2492939
+22/04/18 23:37:13 INFO common.HadoopUtil: Deleting tweets-vectors/partial-vectors-0
+22/04/18 23:37:13 INFO driver.MahoutDriver: Program took 8140 ms (Minutes: 0.13566666666666666)
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ mahout split -i tweets-vectors/tfidf-vectors --trainingOutput train-vectors --testOutput test-vectors --randomSelectionPct 40 --overwrite --sequenceFiles -xm sequential
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /home/hdoop/hadoop-1.1.1/bin/hadoop and HADOOP_CONF_DIR=/home/hdoop/hadoop-1.1.1/conf
+MAHOUT-JOB: /home/hdoop/mahout-distribution-0.7/mahout-examples-0.7-job.jar
+22/04/18 23:37:27 WARN driver.MahoutDriver: No split.props found on classpath, will use command-line arguments only
+22/04/18 23:37:27 INFO common.AbstractJob: Command line arguments: {--endPhase=[2147483647], --input=[tweets-vectors/tfidf-vectors], --method=[sequential], --overwrite=null, --randomSelectionPct=[40], --sequenceFiles=null, --startPhase=[0], --tempDir=[temp], --testOutput=[test-vectors], --trainingOutput=[train-vectors]}
+22/04/18 23:37:27 INFO utils.SplitInput: part-r-00000 has 14021 lines
+22/04/18 23:37:27 INFO utils.SplitInput: part-r-00000 test split size is 5608 based on random selection percentage 40
+22/04/18 23:37:28 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+22/04/18 23:37:28 INFO zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+22/04/18 23:37:28 INFO compress.CodecPool: Got brand-new compressor
+22/04/18 23:37:28 INFO compress.CodecPool: Got brand-new compressor
+22/04/18 23:37:28 INFO utils.SplitInput: file: part-r-00000, input: 14021 train: 14350, test: 5608 starting at 0
+22/04/18 23:37:28 INFO driver.MahoutDriver: Program took 850 ms (Minutes: 0.014166666666666666)
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ mahout trainnb -i train-vectors -el -li labelindex -o model -ow -c
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /home/hdoop/hadoop-1.1.1/bin/hadoop and HADOOP_CONF_DIR=/home/hdoop/hadoop-1.1.1/conf
+MAHOUT-JOB: /home/hdoop/mahout-distribution-0.7/mahout-examples-0.7-job.jar
+22/04/18 23:37:39 WARN driver.MahoutDriver: No trainnb.props found on classpath, will use command-line arguments only
+22/04/18 23:37:39 INFO common.AbstractJob: Command line arguments: {--alphaI=[1.0], --endPhase=[2147483647], --extractLabels=null, --input=[train-vectors], --labelIndex=[labelindex], --output=[model], --overwrite=null, --startPhase=[0], --tempDir=[temp], --trainComplementary=null}
+22/04/18 23:37:39 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+22/04/18 23:37:39 INFO zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+22/04/18 23:37:39 INFO compress.CodecPool: Got brand-new decompressor
+22/04/18 23:37:39 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:40 INFO filecache.TrackerDistributedCacheManager: Creating localhostlabelindex in /tmp/hadoop-hdoop/mapred/local/archive/373570377320150657_-1640439202_1037818715-work-5434880419791291746 with rwxr-xr-x
+22/04/18 23:37:40 INFO filecache.TrackerDistributedCacheManager: Cached labelindex as /tmp/hadoop-hdoop/mapred/local/archive/373570377320150657_-1640439202_1037818715/localhostlabelindex
+22/04/18 23:37:40 INFO filecache.TrackerDistributedCacheManager: Cached labelindex as /tmp/hadoop-hdoop/mapred/local/archive/373570377320150657_-1640439202_1037818715/localhostlabelindex
+22/04/18 23:37:40 INFO mapred.JobClient: Running job: job_local_0001
+22/04/18 23:37:40 INFO util.ProcessTree: setsid exited with exit code 0
+22/04/18 23:37:40 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@2897e493
+22/04/18 23:37:40 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:40 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:40 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:40 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:40 INFO compress.CodecPool: Got brand-new compressor
+22/04/18 23:37:40 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:40 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:40 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:40 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+22/04/18 23:37:40 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@193e82ae
+22/04/18 23:37:40 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:40 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:40 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 58317 bytes
+22/04/18 23:37:40 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:40 INFO mapred.Task: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:40 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:40 INFO mapred.Task: Task attempt_local_0001_r_000000_0 is allowed to commit now
+22/04/18 23:37:40 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_r_000000_0' to temp/summedObservations
+22/04/18 23:37:40 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:40 INFO mapred.Task: Task 'attempt_local_0001_r_000000_0' done.
+22/04/18 23:37:41 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:41 INFO mapred.JobClient: Job complete: job_local_0001
+22/04/18 23:37:41 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:41 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:41 INFO mapred.JobClient:     Spilled Records=4
+22/04/18 23:37:41 INFO mapred.JobClient:     Map output materialized bytes=58321
+22/04/18 23:37:41 INFO mapred.JobClient:     Reduce input records=2
+22/04/18 23:37:41 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:41 INFO mapred.JobClient:     Map input records=14350
+22/04/18 23:37:41 INFO mapred.JobClient:     SPLIT_RAW_BYTES=124
+22/04/18 23:37:41 INFO mapred.JobClient:     Map output bytes=1565675
+22/04/18 23:37:41 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:41 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:41 INFO mapred.JobClient:     Reduce input groups=2
+22/04/18 23:37:41 INFO mapred.JobClient:     Combine output records=2
+22/04/18 23:37:41 INFO mapred.JobClient:     Reduce output records=2
+22/04/18 23:37:41 INFO mapred.JobClient:     Map output records=14350
+22/04/18 23:37:41 INFO mapred.JobClient:     Combine input records=14350
+22/04/18 23:37:41 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:41 INFO mapred.JobClient:     Total committed heap usage (bytes)=781189120
+22/04/18 23:37:41 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:41 INFO mapred.JobClient:     Bytes Read=1666541
+22/04/18 23:37:41 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:41 INFO mapred.JobClient:     HDFS_BYTES_READ=6666616
+22/04/18 23:37:41 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=60756388
+22/04/18 23:37:41 INFO mapred.JobClient:     FILE_BYTES_READ=60133477
+22/04/18 23:37:41 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=148756
+22/04/18 23:37:41 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:41 INFO mapred.JobClient:     Bytes Written=148530
+22/04/18 23:37:41 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:37:41 INFO filecache.TrackerDistributedCacheManager: Creating localhostlabelindex in /tmp/hadoop-hdoop/mapred/local/archive/-7076108482215497638_-1640439202_1037818715-work-5171220689863507907 with rwxr-xr-x
+22/04/18 23:37:41 INFO filecache.TrackerDistributedCacheManager: Cached labelindex as /tmp/hadoop-hdoop/mapred/local/archive/-7076108482215497638_-1640439202_1037818715/localhostlabelindex
+22/04/18 23:37:41 INFO filecache.TrackerDistributedCacheManager: Cached labelindex as /tmp/hadoop-hdoop/mapred/local/archive/-7076108482215497638_-1640439202_1037818715/localhostlabelindex
+22/04/18 23:37:41 INFO mapred.JobClient: Running job: job_local_0002
+22/04/18 23:37:41 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@633b5f82
+22/04/18 23:37:41 INFO mapred.MapTask: io.sort.mb = 100
+22/04/18 23:37:41 INFO mapred.MapTask: data buffer = 79691776/99614720
+22/04/18 23:37:41 INFO mapred.MapTask: record buffer = 262144/327680
+22/04/18 23:37:41 INFO mapred.MapTask: Starting flush of map output
+22/04/18 23:37:41 INFO mapred.MapTask: Finished spill 0
+22/04/18 23:37:41 INFO mapred.Task: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:41 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:41 INFO mapred.Task: Task 'attempt_local_0002_m_000000_0' done.
+22/04/18 23:37:41 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@466a8d7e
+22/04/18 23:37:41 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:41 INFO mapred.Merger: Merging 1 sorted segments
+22/04/18 23:37:41 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 40081 bytes
+22/04/18 23:37:41 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:41 INFO mapred.Task: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+22/04/18 23:37:41 INFO mapred.LocalJobRunner: 
+22/04/18 23:37:41 INFO mapred.Task: Task attempt_local_0002_r_000000_0 is allowed to commit now
+22/04/18 23:37:41 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0002_r_000000_0' to temp/weights
+22/04/18 23:37:41 INFO mapred.LocalJobRunner: reduce > reduce
+22/04/18 23:37:41 INFO mapred.Task: Task 'attempt_local_0002_r_000000_0' done.
+22/04/18 23:37:42 INFO mapred.JobClient:  map 100% reduce 100%
+22/04/18 23:37:42 INFO mapred.JobClient: Job complete: job_local_0002
+22/04/18 23:37:42 INFO mapred.JobClient: Counters: 22
+22/04/18 23:37:42 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:37:42 INFO mapred.JobClient:     Spilled Records=4
+22/04/18 23:37:42 INFO mapred.JobClient:     Map output materialized bytes=40085
+22/04/18 23:37:42 INFO mapred.JobClient:     Reduce input records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:37:42 INFO mapred.JobClient:     Map input records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     SPLIT_RAW_BYTES=134
+22/04/18 23:37:42 INFO mapred.JobClient:     Map output bytes=108292
+22/04/18 23:37:42 INFO mapred.JobClient:     Reduce shuffle bytes=0
+22/04/18 23:37:42 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:37:42 INFO mapred.JobClient:     Reduce input groups=2
+22/04/18 23:37:42 INFO mapred.JobClient:     Combine output records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     Reduce output records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     Map output records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     Combine input records=2
+22/04/18 23:37:42 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:37:42 INFO mapred.JobClient:     Total committed heap usage (bytes)=781189120
+22/04/18 23:37:42 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:37:42 INFO mapred.JobClient:     Bytes Read=148530
+22/04/18 23:37:42 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:37:42 INFO mapred.JobClient:     HDFS_BYTES_READ=6963902
+22/04/18 23:37:42 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=121476728
+22/04/18 23:37:42 INFO mapred.JobClient:     FILE_BYTES_READ=120307059
+22/04/18 23:37:42 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=405704
+22/04/18 23:37:42 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:37:42 INFO mapred.JobClient:     Bytes Written=108418
+22/04/18 23:37:42 INFO driver.MahoutDriver: Program took 2934 ms (Minutes: 0.0489)
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ mahout testnb -i train-vectors -m model -l labelindex -ow -o tweets-testing -c
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /home/hdoop/hadoop-1.1.1/bin/hadoop and HADOOP_CONF_DIR=/home/hdoop/hadoop-1.1.1/conf
+MAHOUT-JOB: /home/hdoop/mahout-distribution-0.7/mahout-examples-0.7-job.jar
+22/04/18 23:37:59 WARN driver.MahoutDriver: No testnb.props found on classpath, will use command-line arguments only
+22/04/18 23:37:59 INFO common.AbstractJob: Command line arguments: {--endPhase=[2147483647], --input=[train-vectors], --labelIndex=[labelindex], --model=[model], --output=[tweets-testing], --overwrite=null, --startPhase=[0], --tempDir=[temp], --testComplementary=null}
+22/04/18 23:37:59 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+22/04/18 23:37:59 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:38:00 INFO filecache.TrackerDistributedCacheManager: Creating localhostmodel in /tmp/hadoop-hdoop/mapred/local/archive/6383326513623120821_104069929_1037821299-work--4661095541599149816 with rwxr-xr-x
+22/04/18 23:38:00 INFO filecache.TrackerDistributedCacheManager: Cached model as /tmp/hadoop-hdoop/mapred/local/archive/6383326513623120821_104069929_1037821299/localhostmodel
+22/04/18 23:38:00 INFO filecache.TrackerDistributedCacheManager: Cached model as /tmp/hadoop-hdoop/mapred/local/archive/6383326513623120821_104069929_1037821299/localhostmodel
+22/04/18 23:38:00 INFO mapred.JobClient: Running job: job_local_0001
+22/04/18 23:38:00 INFO util.ProcessTree: setsid exited with exit code 0
+22/04/18 23:38:00 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@48c8e76a
+22/04/18 23:38:00 INFO zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+22/04/18 23:38:00 INFO compress.CodecPool: Got brand-new decompressor
+Setup
+22/04/18 23:38:00 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:38:00 INFO mapred.LocalJobRunner: 
+22/04/18 23:38:00 INFO mapred.Task: Task attempt_local_0001_m_000000_0 is allowed to commit now
+22/04/18 23:38:00 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_m_000000_0' to tweets-testing
+22/04/18 23:38:00 INFO mapred.LocalJobRunner: 
+22/04/18 23:38:00 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+22/04/18 23:38:01 INFO mapred.JobClient:  map 100% reduce 0%
+22/04/18 23:38:01 INFO mapred.JobClient: Job complete: job_local_0001
+22/04/18 23:38:01 INFO mapred.JobClient: Counters: 14
+22/04/18 23:38:01 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:38:01 INFO mapred.JobClient:     Spilled Records=0
+22/04/18 23:38:01 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:38:01 INFO mapred.JobClient:     Map input records=14350
+22/04/18 23:38:01 INFO mapred.JobClient:     SPLIT_RAW_BYTES=124
+22/04/18 23:38:01 INFO mapred.JobClient:     Map output records=14350
+22/04/18 23:38:01 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:38:01 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:38:01 INFO mapred.JobClient:     Total committed heap usage (bytes)=390594560
+22/04/18 23:38:01 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:38:01 INFO mapred.JobClient:     Bytes Read=1666541
+22/04/18 23:38:01 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:38:01 INFO mapred.JobClient:     HDFS_BYTES_READ=2179893
+22/04/18 23:38:01 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=30577696
+22/04/18 23:38:01 INFO mapred.JobClient:     FILE_BYTES_READ=30037578
+22/04/18 23:38:01 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=405870
+22/04/18 23:38:01 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:38:01 INFO mapred.JobClient:     Bytes Written=405870
+22/04/18 23:38:01 INFO test.TestNaiveBayesDriver: Complementary Results: =======================================================
+Summary
+-------------------------------------------------------
+Correctly Classified Instances          :      13842	   96.4599%
+Incorrectly Classified Instances        :        508	    3.5401%
+Total Classified Instances              :      14350
+
+=======================================================
+Confusion Matrix
+-------------------------------------------------------
+a    	b    	<--Classified as
+1937 	83   	 |  2020  	a     = 0
+425  	11905	 |  12330 	b     = 1
+
+
+22/04/18 23:38:01 INFO driver.MahoutDriver: Program took 1627 ms (Minutes: 0.027116666666666667)
+hdoop@tanmay-Legion-5-Pro:~/test/hate-speech-detection$ mahout testnb -i test-vectors -m model -l labelindex -ow -o tweets-testing -c
+MAHOUT_LOCAL is not set; adding HADOOP_CONF_DIR to classpath.
+Running on hadoop, using /home/hdoop/hadoop-1.1.1/bin/hadoop and HADOOP_CONF_DIR=/home/hdoop/hadoop-1.1.1/conf
+MAHOUT-JOB: /home/hdoop/mahout-distribution-0.7/mahout-examples-0.7-job.jar
+22/04/18 23:39:47 WARN driver.MahoutDriver: No testnb.props found on classpath, will use command-line arguments only
+22/04/18 23:39:47 INFO common.AbstractJob: Command line arguments: {--endPhase=[2147483647], --input=[test-vectors], --labelIndex=[labelindex], --model=[model], --output=[tweets-testing], --overwrite=null, --startPhase=[0], --tempDir=[temp], --testComplementary=null}
+22/04/18 23:39:47 INFO common.HadoopUtil: Deleting tweets-testing
+22/04/18 23:39:47 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+22/04/18 23:39:47 INFO input.FileInputFormat: Total input paths to process : 1
+22/04/18 23:39:47 INFO filecache.TrackerDistributedCacheManager: Creating localhostmodel in /tmp/hadoop-hdoop/mapred/local/archive/4057960734624860956_104069929_1037821299-work--9058682094472399549 with rwxr-xr-x
+22/04/18 23:39:47 INFO filecache.TrackerDistributedCacheManager: Cached model as /tmp/hadoop-hdoop/mapred/local/archive/4057960734624860956_104069929_1037821299/localhostmodel
+22/04/18 23:39:47 INFO filecache.TrackerDistributedCacheManager: Cached model as /tmp/hadoop-hdoop/mapred/local/archive/4057960734624860956_104069929_1037821299/localhostmodel
+22/04/18 23:39:47 INFO mapred.JobClient: Running job: job_local_0001
+22/04/18 23:39:47 INFO util.ProcessTree: setsid exited with exit code 0
+22/04/18 23:39:47 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@c4dc1c6
+22/04/18 23:39:47 INFO zlib.ZlibFactory: Successfully loaded & initialized native-zlib library
+22/04/18 23:39:47 INFO compress.CodecPool: Got brand-new decompressor
+Setup
+22/04/18 23:39:47 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+22/04/18 23:39:47 INFO mapred.LocalJobRunner: 
+22/04/18 23:39:47 INFO mapred.Task: Task attempt_local_0001_m_000000_0 is allowed to commit now
+22/04/18 23:39:47 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_m_000000_0' to tweets-testing
+22/04/18 23:39:47 INFO mapred.LocalJobRunner: 
+22/04/18 23:39:47 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+22/04/18 23:39:48 INFO mapred.JobClient:  map 100% reduce 0%
+22/04/18 23:39:48 INFO mapred.JobClient: Job complete: job_local_0001
+22/04/18 23:39:48 INFO mapred.JobClient: Counters: 14
+22/04/18 23:39:48 INFO mapred.JobClient:   Map-Reduce Framework
+22/04/18 23:39:48 INFO mapred.JobClient:     Spilled Records=0
+22/04/18 23:39:48 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+22/04/18 23:39:48 INFO mapred.JobClient:     Map input records=5608
+22/04/18 23:39:48 INFO mapred.JobClient:     SPLIT_RAW_BYTES=123
+22/04/18 23:39:48 INFO mapred.JobClient:     Map output records=5608
+22/04/18 23:39:48 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+22/04/18 23:39:48 INFO mapred.JobClient:     CPU time spent (ms)=0
+22/04/18 23:39:48 INFO mapred.JobClient:     Total committed heap usage (bytes)=390594560
+22/04/18 23:39:48 INFO mapred.JobClient:   File Input Format Counters 
+22/04/18 23:39:48 INFO mapred.JobClient:     Bytes Read=689652
+22/04/18 23:39:48 INFO mapred.JobClient:   FileSystemCounters
+22/04/18 23:39:48 INFO mapred.JobClient:     HDFS_BYTES_READ=1203004
+22/04/18 23:39:48 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=30577697
+22/04/18 23:39:48 INFO mapred.JobClient:     FILE_BYTES_READ=30037577
+22/04/18 23:39:48 INFO mapred.JobClient:     HDFS_BYTES_WRITTEN=158654
+22/04/18 23:39:48 INFO mapred.JobClient:   File Output Format Counters 
+22/04/18 23:39:48 INFO mapred.JobClient:     Bytes Written=158654
+22/04/18 23:39:48 INFO test.TestNaiveBayesDriver: Complementary Results: =======================================================
+Summary
+-------------------------------------------------------
+Correctly Classified Instances          :       4927	   87.8566%
+Incorrectly Classified Instances        :        681	   12.1434%
+Total Classified Instances              :       5608
+
+=======================================================
+Confusion Matrix
+-------------------------------------------------------
+a    	b    	<--Classified as
+1035 	339  	 |  1374  	a     = 0
+342  	3892 	 |  4234  	b     = 1
+
+
+22/04/18 23:39:48 INFO driver.MahoutDriver: Program took 1653 ms (Minutes: 0.02755)
